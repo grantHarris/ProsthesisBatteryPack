@@ -1538,11 +1538,13 @@ v.1.2</description>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
 <part name="P+4" library="supply1" deviceset="+5V" device=""/>
 <part name="P+5" library="supply1" deviceset="+5V" device=""/>
-<part name="PAD1" library="wirepad" deviceset="WIREPAD" device="SMD5-2,5"/>
-<part name="PAD2" library="wirepad" deviceset="WIREPAD" device="SMD5-2,5"/>
-<part name="PAD3" library="wirepad" deviceset="WIREPAD" device="SMD5-2,5"/>
-<part name="PAD4" library="wirepad" deviceset="WIREPAD" device="SMD5-2,5"/>
+<part name="DI" library="wirepad" deviceset="WIREPAD" device="SMD5-2,5"/>
+<part name="CI" library="wirepad" deviceset="WIREPAD" device="SMD5-2,5"/>
+<part name="+12V" library="wirepad" deviceset="WIREPAD" device="SMD5-2,5"/>
+<part name="GND" library="wirepad" deviceset="WIREPAD" device="SMD5-2,5"/>
 <part name="GND157" library="supply1" deviceset="GND" device=""/>
+<part name="DO" library="wirepad" deviceset="WIREPAD" device="SMD5-2,5"/>
+<part name="CO" library="wirepad" deviceset="WIREPAD" device="SMD5-2,5"/>
 </parts>
 <sheets>
 <sheet>
@@ -1871,11 +1873,13 @@ v.1.2</description>
 <instance part="P+3" gate="1" x="45.72" y="162.56"/>
 <instance part="P+4" gate="1" x="76.2" y="162.56"/>
 <instance part="P+5" gate="1" x="104.14" y="162.56"/>
-<instance part="PAD1" gate="G$1" x="-25.4" y="147.32"/>
-<instance part="PAD2" gate="G$1" x="-25.4" y="142.24"/>
-<instance part="PAD3" gate="G$1" x="35.56" y="185.42"/>
-<instance part="PAD4" gate="G$1" x="-25.4" y="170.18"/>
+<instance part="DI" gate="G$1" x="-25.4" y="147.32"/>
+<instance part="CI" gate="G$1" x="-25.4" y="142.24"/>
+<instance part="+12V" gate="G$1" x="25.4" y="185.42"/>
+<instance part="GND" gate="G$1" x="-25.4" y="170.18"/>
 <instance part="GND157" gate="1" x="-12.7" y="170.18" rot="R90"/>
+<instance part="DO" gate="G$1" x="668.02" y="15.24" rot="R180"/>
+<instance part="CO" gate="G$1" x="660.4" y="10.16" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -2515,7 +2519,7 @@ v.1.2</description>
 </segment>
 <segment>
 <pinref part="GND157" gate="1" pin="GND"/>
-<pinref part="PAD4" gate="G$1" pin="P"/>
+<pinref part="GND" gate="G$1" pin="P"/>
 <wire x1="-22.86" y1="170.18" x2="-15.24" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -3676,13 +3680,15 @@ v.1.2</description>
 <net name="N$151" class="0">
 <segment>
 <pinref part="U$78" gate="G$1" pin="DO"/>
-<wire x1="650.24" y1="15.24" x2="657.86" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="650.24" y1="15.24" x2="665.48" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="DO" gate="G$1" pin="P"/>
 </segment>
 </net>
 <net name="N$152" class="0">
 <segment>
 <pinref part="U$78" gate="G$1" pin="CO"/>
 <wire x1="650.24" y1="10.16" x2="657.86" y2="10.16" width="0.1524" layer="91"/>
+<pinref part="CO" gate="G$1" pin="P"/>
 </segment>
 </net>
 <net name="N$153" class="0">
@@ -3750,9 +3756,12 @@ v.1.2</description>
 <net name="+12V" class="0">
 <segment>
 <pinref part="C84" gate="G$1" pin="+"/>
-<wire x1="38.1" y1="185.42" x2="45.72" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="185.42" x2="38.1" y2="185.42" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="IN"/>
-<pinref part="PAD3" gate="G$1" pin="P"/>
+<pinref part="+12V" gate="G$1" pin="P"/>
+<junction x="27.94" y="185.42"/>
+<wire x1="38.1" y1="185.42" x2="45.72" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="185.42" x2="38.1" y2="185.42" width="0.1524" layer="91"/>
 <junction x="38.1" y="185.42"/>
 </segment>
 </net>
@@ -4379,14 +4388,14 @@ v.1.2</description>
 <net name="N$149" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="DI"/>
-<pinref part="PAD1" gate="G$1" pin="P"/>
+<pinref part="DI" gate="G$1" pin="P"/>
 <wire x1="-22.86" y1="147.32" x2="5.08" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$150" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="CI"/>
-<pinref part="PAD2" gate="G$1" pin="P"/>
+<pinref part="CI" gate="G$1" pin="P"/>
 <wire x1="-22.86" y1="142.24" x2="5.08" y2="142.24" width="0.1524" layer="91"/>
 </segment>
 </net>
