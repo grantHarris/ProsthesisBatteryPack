@@ -7248,8 +7248,8 @@ Polyswitch Resetable Fuses</description>
 <part name="R6" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="100R"/>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="IC1" library="linear" deviceset="78*" device="DT" technology="05"/>
-<part name="C1" library="SparkFun-Capacitors" deviceset="CAP_POL" device="C"/>
-<part name="C4" library="SparkFun-Capacitors" deviceset="CAP_POL" device="C"/>
+<part name="C1" library="SparkFun-Capacitors" deviceset="CAP_POL" device="C" value="10uF"/>
+<part name="C4" library="SparkFun-Capacitors" deviceset="CAP_POL" device="C" value="10uF"/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND10" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -7295,7 +7295,7 @@ Polyswitch Resetable Fuses</description>
 <part name="GND28" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="D1" library="SparkFun-LED" deviceset="LED" device="1206"/>
 <part name="GND29" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="R22" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES"/>
+<part name="R22" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="470R"/>
 <part name="ON" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/3" device=""/>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="P+4" library="supply1" deviceset="+12V" device=""/>
@@ -7310,7 +7310,7 @@ Polyswitch Resetable Fuses</description>
 <part name="GND18" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND19" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND32" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="C5" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP"/>
+<part name="C5" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
 <part name="GND33" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SG1" library="SparkFun-Electromechanical" deviceset="BUZZER" device="NS"/>
 <part name="P+6" library="supply1" deviceset="+5V" device=""/>
@@ -7321,8 +7321,8 @@ Polyswitch Resetable Fuses</description>
 <part name="R30" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="GND35" library="supply1" deviceset="GND" device=""/>
 <part name="Q8" library="transistor-small-signal" deviceset="BSS123" device=""/>
-<part name="R31" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES"/>
-<part name="R32" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES"/>
+<part name="R31" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="100R"/>
+<part name="R32" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="GND36" library="supply1" deviceset="GND" device=""/>
 <part name="GND37" library="supply1" deviceset="GND" device=""/>
 <part name="FANS" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/3" device=""/>
@@ -7752,7 +7752,7 @@ Polyswitch Resetable Fuses</description>
 <instance part="GND16" gate="1" x="53.34" y="147.32" rot="R270"/>
 <instance part="R6" gate="G$1" x="30.48" y="137.16" rot="R180"/>
 <instance part="GND2" gate="1" x="-55.88" y="198.12" rot="R90"/>
-<instance part="P+1" gate="1" x="-58.42" y="205.74"/>
+<instance part="P+1" gate="1" x="-48.26" y="205.74"/>
 <instance part="U$1" gate="G$1" x="-81.28" y="187.96"/>
 <instance part="GND7" gate="1" x="-60.96" y="195.58" rot="R90"/>
 <instance part="P+14" gate="1" x="15.24" y="154.94"/>
@@ -7851,7 +7851,7 @@ Polyswitch Resetable Fuses</description>
 </net>
 <net name="+5V" class="0">
 <segment>
-<wire x1="-66.04" y1="203.2" x2="-58.42" y2="203.2" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="203.2" x2="-48.26" y2="203.2" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="1" pin="+5V"/>
 <pinref part="U$1" gate="G$1" pin="VIN"/>
 </segment>
@@ -8664,7 +8664,7 @@ Must order in multiples of 2</text>
 <instance part="SUPPLY6" gate="G$1" x="157.48" y="190.5"/>
 <instance part="X2" gate="-1" x="0" y="157.48"/>
 <instance part="X2" gate="-2" x="0" y="177.8"/>
-<instance part="X3" gate="-1" x="-2.54" y="50.8"/>
+<instance part="X3" gate="-1" x="10.16" y="30.48"/>
 <instance part="X3" gate="-2" x="-2.54" y="71.12"/>
 <instance part="X4" gate="-1" x="-109.22" y="195.58"/>
 <instance part="X4" gate="-2" x="-109.22" y="200.66"/>
@@ -8889,7 +8889,7 @@ Must order in multiples of 2</text>
 <pinref part="R39" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="PRECHARGE_RESISTOR_IN" class="0">
+<net name="PRECHARGE_RESISTOR_IN_1" class="0">
 <segment>
 <pinref part="PRECHARGE_RELAY" gate="2" pin="P"/>
 <wire x1="20.32" y1="177.8" x2="5.08" y2="177.8" width="0.1524" layer="91"/>
@@ -8920,7 +8920,7 @@ Must order in multiples of 2</text>
 <pinref part="D7" gate="G$1" pin="A"/>
 </segment>
 </net>
-<net name="PRECHARGE_RESISTOR_IN1" class="0">
+<net name="PRECHARGE_RESISTOR_IN_2" class="0">
 <segment>
 <pinref part="PRECHARGE_RELAY1" gate="2" pin="P"/>
 <wire x1="15.24" y1="71.12" x2="2.54" y2="71.12" width="0.2032" layer="91"/>
@@ -9052,7 +9052,7 @@ Must order in multiples of 2</text>
 <segment>
 <pinref part="PRECHARGE_RELAY1" gate="3" pin="P"/>
 <pinref part="X3" gate="-1" pin="KL"/>
-<wire x1="2.54" y1="50.8" x2="15.24" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="30.48" x2="15.24" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$42" class="0">
