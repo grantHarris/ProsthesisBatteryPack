@@ -3880,6 +3880,57 @@ TinyLogic(R) from FAIRCHILD Semiconductor TM
 <rectangle x1="0.85" y1="-2" x2="1.1" y2="-1.4" layer="51"/>
 <rectangle x1="-1.1" y1="1.4" x2="-0.85" y2="2" layer="51"/>
 </package>
+<package name="SOT23-5">
+<description>&lt;b&gt;Small Outline Transistor&lt;/b&gt;&lt;p&gt;
+SOT753 - Philips Semiconductors&lt;br&gt;
+Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_HCT1G66_3.pdf</description>
+<wire x1="0" y1="-1.29" x2="0" y2="-1.3" width="0.01" layer="21"/>
+<wire x1="1.42" y1="0.8" x2="1.42" y2="-0.8" width="0.127" layer="21"/>
+<wire x1="1.42" y1="-0.8" x2="-1.42" y2="-0.8" width="0.127" layer="51"/>
+<wire x1="-1.42" y1="-0.8" x2="-1.42" y2="0.8" width="0.127" layer="21"/>
+<wire x1="-1.42" y1="0.8" x2="1.42" y2="0.8" width="0.127" layer="51"/>
+<wire x1="-1.27" y1="0.65" x2="1.28" y2="0.65" width="0.075" layer="21"/>
+<wire x1="1.28" y1="0.65" x2="1.28" y2="-0.66" width="0.075" layer="21"/>
+<wire x1="1.28" y1="-0.66" x2="-1.27" y2="-0.66" width="0.075" layer="21"/>
+<wire x1="-1.27" y1="-0.66" x2="-1.27" y2="0.65" width="0.075" layer="21"/>
+<wire x1="-1.75" y1="2.25" x2="1.75" y2="2.25" width="0.254" layer="39"/>
+<wire x1="1.75" y1="2.25" x2="1.75" y2="-2.25" width="0.254" layer="39"/>
+<wire x1="1.75" y1="-2.25" x2="-1.75" y2="-2.25" width="0.254" layer="39"/>
+<wire x1="-1.75" y1="-2.25" x2="-1.75" y2="2.25" width="0.254" layer="39"/>
+<smd name="1" x="-0.95" y="-1.29" dx="0.69" dy="0.99" layer="1"/>
+<smd name="2" x="0" y="-1.29" dx="0.69" dy="0.99" layer="1"/>
+<smd name="3" x="0.95" y="-1.29" dx="0.69" dy="0.99" layer="1"/>
+<smd name="4" x="0.95" y="1.3" dx="0.69" dy="0.99" layer="1"/>
+<smd name="5" x="-0.95" y="1.3" dx="0.69" dy="0.99" layer="1"/>
+<text x="-2.54" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.11" y1="0.68" x2="-0.78" y2="1.43" layer="51"/>
+<rectangle x1="0.79" y1="0.67" x2="1.12" y2="1.42" layer="51"/>
+<rectangle x1="-1.11" y1="-1.42" x2="-0.78" y2="-0.67" layer="51"/>
+<rectangle x1="-0.16" y1="-1.42" x2="0.17" y2="-0.67" layer="51"/>
+<rectangle x1="0.79" y1="-1.42" x2="1.12" y2="-0.67" layer="51"/>
+</package>
+<package name="SC70-5">
+<description>&lt;b&gt;SMT SC70-5&lt;/b&gt;&lt;p&gt;
+SOT353 - Philips Semiconductors&lt;br&gt;
+Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_HCT1G66_3.pdf</description>
+<wire x1="1" y1="0.55" x2="-1" y2="0.55" width="0.127" layer="51"/>
+<wire x1="-1" y1="0.55" x2="-1" y2="-0.55" width="0.127" layer="21"/>
+<wire x1="-1" y1="-0.55" x2="1" y2="-0.55" width="0.127" layer="51"/>
+<wire x1="1" y1="-0.55" x2="1" y2="0.55" width="0.127" layer="21"/>
+<smd name="1" x="-0.65" y="-0.85" dx="0.4" dy="0.7" layer="1"/>
+<smd name="2" x="0" y="-0.85" dx="0.4" dy="0.7" layer="1"/>
+<smd name="3" x="0.65" y="-0.85" dx="0.4" dy="0.7" layer="1"/>
+<smd name="4" x="0.65" y="0.85" dx="0.4" dy="0.7" layer="1"/>
+<smd name="5" x="-0.65" y="0.85" dx="0.4" dy="0.7" layer="1"/>
+<text x="-2.54" y="1.27" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.125" y1="-1.05" x2="0.125" y2="-0.6" layer="51"/>
+<rectangle x1="-0.775" y1="-1.05" x2="-0.525" y2="-0.6" layer="51"/>
+<rectangle x1="0.525" y1="-1.05" x2="0.775" y2="-0.6" layer="51"/>
+<rectangle x1="-0.775" y1="0.6" x2="-0.525" y2="1.05" layer="51"/>
+<rectangle x1="0.525" y1="0.6" x2="0.775" y2="1.05" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="74125">
@@ -3899,6 +3950,15 @@ TinyLogic(R) from FAIRCHILD Semiconductor TM
 <text x="1.905" y="2.54" size="1.27" layer="95" rot="R90">VCC</text>
 <pin name="GND" x="0" y="-7.62" visible="pad" length="middle" direction="pwr" rot="R90"/>
 <pin name="VCC" x="0" y="7.62" visible="pad" length="middle" direction="pwr" rot="R270"/>
+</symbol>
+<symbol name="7404">
+<wire x1="-2.54" y1="5.08" x2="5.08" y2="0" width="0.4064" layer="94"/>
+<wire x1="5.08" y1="0" x2="-2.54" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="5.08" width="0.4064" layer="94"/>
+<text x="2.54" y="3.175" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="I" x="-5.08" y="0" visible="pad" length="short" direction="in"/>
+<pin name="O" x="10.16" y="0" visible="pad" length="middle" direction="out" function="dot" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -3922,6 +3982,43 @@ TinyLogic(R) from FAIRCHILD Semiconductor TM
 <connect gate="G$3" pin="VCC" pad="8"/>
 </connects>
 <technologies>
+<technology name="LVC"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="74*1G04" prefix="IC">
+<description>&lt;b&gt;INVERTER&lt;/b&gt; Gate</description>
+<gates>
+<gate name="A" symbol="7404" x="17.78" y="0"/>
+<gate name="P" symbol="PWRN" x="-5.08" y="-10.16" addlevel="request"/>
+</gates>
+<devices>
+<device name="DBV" package="SOT23-5">
+<connects>
+<connect gate="A" pin="I" pad="2"/>
+<connect gate="A" pin="O" pad="4"/>
+<connect gate="P" pin="GND" pad="3"/>
+<connect gate="P" pin="VCC" pad="5"/>
+</connects>
+<technologies>
+<technology name="AHC"/>
+<technology name="AHCT"/>
+<technology name="AUC"/>
+<technology name="LVC"/>
+</technologies>
+</device>
+<device name="DCK" package="SC70-5">
+<connects>
+<connect gate="A" pin="I" pad="2"/>
+<connect gate="A" pin="O" pad="4"/>
+<connect gate="P" pin="GND" pad="3"/>
+<connect gate="P" pin="VCC" pad="5"/>
+</connects>
+<technologies>
+<technology name="AHC"/>
+<technology name="AHCT"/>
+<technology name="AUC"/>
 <technology name="LVC"/>
 </technologies>
 </device>
@@ -7216,6 +7313,144 @@ Polyswitch Resetable Fuses</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="SparkFun-PowerIC">
+<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
+In this library you'll find drivers, regulators, and amplifiers.&lt;br&gt;&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
+&lt;br&gt;&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="PTC">
+<wire x1="-3.81" y1="1.524" x2="3.81" y2="1.524" width="0.2032" layer="21"/>
+<wire x1="3.81" y1="1.524" x2="3.81" y2="-1.524" width="0.2032" layer="21"/>
+<wire x1="3.81" y1="-1.524" x2="-3.81" y2="-1.524" width="0.2032" layer="21"/>
+<wire x1="-3.81" y1="-1.524" x2="-3.81" y2="1.524" width="0.2032" layer="21"/>
+<pad name="P$1" x="-2.54" y="0" drill="0.8" diameter="1.8796"/>
+<pad name="P$2" x="2.54" y="0" drill="0.8" diameter="1.8796"/>
+<text x="-3.81" y="1.705" size="0.4318" layer="25">&gt;Name</text>
+<text x="-3.81" y="-2.14" size="0.4318" layer="27">&gt;Value</text>
+</package>
+<package name="PTC-1206">
+<wire x1="-1.5" y1="0.75" x2="1.5" y2="0.75" width="0.127" layer="51"/>
+<wire x1="1.5" y1="0.75" x2="1.5" y2="-0.75" width="0.127" layer="51"/>
+<wire x1="1.5" y1="-0.75" x2="-1.5" y2="-0.75" width="0.127" layer="51"/>
+<wire x1="-1.5" y1="-0.75" x2="-1.5" y2="0.75" width="0.127" layer="51"/>
+<wire x1="0.635" y1="-0.762" x2="-0.635" y2="-0.762" width="0.2032" layer="21"/>
+<wire x1="-0.635" y1="0.762" x2="0.635" y2="0.762" width="0.2032" layer="21"/>
+<wire x1="-1.143" y1="-1.016" x2="0.254" y2="1.016" width="0.127" layer="51"/>
+<wire x1="0.254" y1="1.016" x2="1.143" y2="1.016" width="0.127" layer="51"/>
+<smd name="1" x="-1.4" y="0" dx="1" dy="1.8" layer="1"/>
+<smd name="2" x="1.4" y="0" dx="1" dy="1.8" layer="1"/>
+<text x="-1.524" y="1.27" size="0.4064" layer="25">&gt;Name</text>
+<text x="-1.524" y="-1.651" size="0.4064" layer="27">&gt;Value</text>
+</package>
+<package name="0603">
+<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
+<wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
+<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
+<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
+<text x="-0.889" y="0.762" size="0.4064" layer="25" font="vector">&gt;NAME</text>
+<text x="-1.016" y="-1.143" size="0.4064" layer="27" font="vector">&gt;VALUE</text>
+<rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
+<rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
+</package>
+<package name="PTC-1206-WIDE">
+<wire x1="-1.5" y1="0.75" x2="1.5" y2="0.75" width="0.127" layer="51"/>
+<wire x1="1.5" y1="0.75" x2="1.5" y2="-0.75" width="0.127" layer="51"/>
+<wire x1="1.5" y1="-0.75" x2="-1.5" y2="-0.75" width="0.127" layer="51"/>
+<wire x1="-1.5" y1="-0.75" x2="-1.5" y2="0.75" width="0.127" layer="51"/>
+<wire x1="0.635" y1="-0.762" x2="-0.635" y2="-0.762" width="0.2032" layer="21"/>
+<wire x1="-0.635" y1="0.762" x2="0.635" y2="0.762" width="0.2032" layer="21"/>
+<wire x1="-1.143" y1="-1.016" x2="0.254" y2="1.016" width="0.127" layer="51"/>
+<wire x1="0.254" y1="1.016" x2="1.143" y2="1.016" width="0.127" layer="51"/>
+<smd name="1" x="-1.654" y="0" dx="1" dy="1.8" layer="1"/>
+<smd name="2" x="1.654" y="0" dx="1" dy="1.8" layer="1"/>
+<text x="-1.524" y="1.27" size="0.4064" layer="25">&gt;Name</text>
+<text x="-1.524" y="-1.651" size="0.4064" layer="27">&gt;Value</text>
+</package>
+</packages>
+<symbols>
+<symbol name="PTC">
+<wire x1="5.08" y1="1.27" x2="5.08" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-1.27" x2="-2.54" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-1.27" x2="-2.54" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.27" x2="5.08" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="-2.54" x2="3.81" y2="2.54" width="0.254" layer="94"/>
+<wire x1="3.81" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<text x="-2.54" y="3.048" size="1.778" layer="95">&gt;NAME</text>
+<text x="-3.302" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-5.08" y="0" visible="off" length="short"/>
+<pin name="2" x="7.62" y="0" visible="off" length="short" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="PTC" prefix="F">
+<description>&lt;b&gt;Resettable Fuse PTC&lt;/b&gt;
+Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
+<gates>
+<gate name="G$1" symbol="PTC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="PTH" package="PTC">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SMD" package="PTC-1206">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-11150"/>
+</technology>
+</technologies>
+</device>
+<device name="0603" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SMD-W" package="PTC-1206-WIDE">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="THERMISTOR1206" package="PTC-1206">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-08585" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -7369,7 +7604,6 @@ Polyswitch Resetable Fuses</description>
 <part name="GND51" library="supply1" deviceset="AGND" device=""/>
 <part name="GND58" library="supply1" deviceset="AGND" device=""/>
 <part name="GND60" library="supply1" deviceset="AGND" device=""/>
-<part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="D6" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="SOD123"/>
 <part name="D3" library="diode" deviceset="BAS40-04" device=""/>
 <part name="D4" library="diode" deviceset="BAS40-04" device=""/>
@@ -7381,7 +7615,6 @@ Polyswitch Resetable Fuses</description>
 <part name="R42" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="470k"/>
 <part name="R43" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="13K"/>
 <part name="GND64" library="supply1" deviceset="AGND" device=""/>
-<part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="D7" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="SOD123"/>
 <part name="R45" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="100k"/>
 <part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
@@ -7399,8 +7632,6 @@ Polyswitch Resetable Fuses</description>
 <part name="D11" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="SOD123"/>
 <part name="P+26" library="supply1" deviceset="+12V" device=""/>
 <part name="P+27" library="supply1" deviceset="+12V" device=""/>
-<part name="GND73" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="GND74" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="U$5" library="grant" deviceset="REE-0505S" device=""/>
 <part name="P+29" library="supply1" deviceset="+5V" device=""/>
 <part name="SUPPLY6" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
@@ -7443,13 +7674,41 @@ Polyswitch Resetable Fuses</description>
 <part name="P+24" library="supply1" deviceset="+5V" device=""/>
 <part name="GND59" library="supply1" deviceset="GND" device=""/>
 <part name="GND66" library="supply1" deviceset="GND" device=""/>
-<part name="AGND4" library="supply1" deviceset="AGND" device=""/>
-<part name="AGND5" library="supply1" deviceset="AGND" device=""/>
-<part name="AGND6" library="supply1" deviceset="AGND" device=""/>
-<part name="AGND7" library="supply1" deviceset="AGND" device=""/>
 <part name="GND54" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND8" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND9" library="supply1" deviceset="AGND" device=""/>
+<part name="GND55" library="supply1" deviceset="GND" device=""/>
+<part name="GND56" library="supply1" deviceset="GND" device=""/>
+<part name="GND57" library="supply1" deviceset="GND" device=""/>
+<part name="GND61" library="supply1" deviceset="GND" device=""/>
+<part name="P+28" library="supply1" deviceset="+5V" device=""/>
+<part name="P+30" library="supply1" deviceset="+5V" device=""/>
+<part name="X1" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/2" device=""/>
+<part name="GND62" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="IC6" library="74xx-little-de" deviceset="74*1G04" device="DBV" technology="LVC"/>
+<part name="IC7" library="74xx-little-de" deviceset="74*1G04" device="DBV" technology="LVC"/>
+<part name="GND74" library="supply1" deviceset="GND" device=""/>
+<part name="GND75" library="supply1" deviceset="GND" device=""/>
+<part name="P+33" library="supply1" deviceset="+5V" device=""/>
+<part name="P+34" library="supply1" deviceset="+5V" device=""/>
+<part name="C9" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
+<part name="C10" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
+<part name="GND76" library="supply1" deviceset="GND" device=""/>
+<part name="GND77" library="supply1" deviceset="GND" device=""/>
+<part name="R48" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="100R"/>
+<part name="R49" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="100R"/>
+<part name="X6" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/4" device=""/>
+<part name="GND63" library="supply1" deviceset="GND" device=""/>
+<part name="P+31" library="supply1" deviceset="+5V" device=""/>
+<part name="F2" library="SparkFun-PowerIC" deviceset="PTC" device="THERMISTOR1206"/>
+<part name="D12" library="diode" deviceset="BAS40-04" device=""/>
+<part name="D13" library="diode" deviceset="BAS40-04" device=""/>
+<part name="GND67" library="supply1" deviceset="GND" device=""/>
+<part name="P+32" library="supply1" deviceset="+5V" device=""/>
+<part name="GND68" library="supply1" deviceset="GND" device=""/>
+<part name="P+35" library="supply1" deviceset="+5V" device=""/>
+<part name="CAN1" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/3" device=""/>
+<part name="GND73" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7611,6 +7870,10 @@ Polyswitch Resetable Fuses</description>
 <instance part="CAN" gate="-1" x="147.32" y="152.4" rot="R270"/>
 <instance part="CAN" gate="-2" x="134.62" y="147.32" rot="R270"/>
 <instance part="CAN" gate="-3" x="127" y="152.4" rot="R270"/>
+<instance part="CAN1" gate="-1" x="142.24" y="190.5" rot="R270"/>
+<instance part="CAN1" gate="-2" x="137.16" y="190.5" rot="R270"/>
+<instance part="CAN1" gate="-3" x="129.54" y="190.5" rot="R270"/>
+<instance part="GND73" gate="1" x="142.24" y="182.88"/>
 </instances>
 <busses>
 </busses>
@@ -7654,6 +7917,10 @@ Polyswitch Resetable Fuses</description>
 <pinref part="CAN" gate="-1" pin="KL"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 <wire x1="147.32" y1="147.32" x2="147.32" y2="142.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="CAN1" gate="-1" pin="KL"/>
+<pinref part="GND73" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="CAN_RXD" class="0">
@@ -7702,13 +7969,19 @@ Polyswitch Resetable Fuses</description>
 <pinref part="U5" gate="MCP2551" pin="CANH"/>
 <pinref part="R12" gate="G$1" pin="2"/>
 <wire x1="106.68" y1="147.32" x2="114.3" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="147.32" x2="127" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="147.32" x2="119.38" y2="147.32" width="0.1524" layer="91"/>
 <junction x="106.68" y="147.32"/>
+<wire x1="119.38" y1="147.32" x2="127" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="147.32" x2="114.3" y2="134.62" width="0.1524" layer="91"/>
 <junction x="114.3" y="147.32"/>
 <pinref part="D5" gate="G$1" pin="1"/>
 <wire x1="114.3" y1="134.62" x2="119.38" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="CAN" gate="-3" pin="KL"/>
+<wire x1="119.38" y1="147.32" x2="119.38" y2="175.26" width="0.1524" layer="91"/>
+<pinref part="CAN1" gate="-3" pin="KL"/>
+<wire x1="119.38" y1="175.26" x2="129.54" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="175.26" x2="129.54" y2="185.42" width="0.1524" layer="91"/>
+<junction x="119.38" y="147.32"/>
 </segment>
 </net>
 <net name="PIN2" class="0">
@@ -7722,12 +7995,18 @@ Polyswitch Resetable Fuses</description>
 <pinref part="R10" gate="G$1" pin="2"/>
 <wire x1="93.98" y1="142.24" x2="111.76" y2="142.24" width="0.1524" layer="91"/>
 <junction x="93.98" y="142.24"/>
-<wire x1="111.76" y1="142.24" x2="134.62" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="142.24" x2="132.08" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="142.24" x2="134.62" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="142.24" x2="111.76" y2="129.54" width="0.1524" layer="91"/>
 <junction x="111.76" y="142.24"/>
 <pinref part="D5" gate="G$1" pin="2"/>
 <wire x1="111.76" y1="129.54" x2="119.38" y2="129.54" width="0.1524" layer="91"/>
 <pinref part="CAN" gate="-2" pin="KL"/>
+<wire x1="132.08" y1="142.24" x2="132.08" y2="175.26" width="0.1524" layer="91"/>
+<pinref part="CAN1" gate="-2" pin="KL"/>
+<wire x1="132.08" y1="175.26" x2="137.16" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="175.26" x2="137.16" y2="185.42" width="0.1524" layer="91"/>
+<junction x="132.08" y="142.24"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -7909,18 +8188,11 @@ Polyswitch Resetable Fuses</description>
 <label x="-99.06" y="175.26" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="CHARGE_1" class="0">
+<net name="CHARGE_2" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="15/A1"/>
 <wire x1="-66.04" y1="170.18" x2="-60.96" y2="170.18" width="0.1524" layer="91"/>
 <label x="-60.96" y="170.18" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="CHARGE_2" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="14/A0"/>
-<wire x1="-66.04" y1="167.64" x2="-60.96" y2="167.64" width="0.1524" layer="91"/>
-<label x="-60.96" y="167.64" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$29" class="0">
@@ -7990,12 +8262,33 @@ Polyswitch Resetable Fuses</description>
 </net>
 <net name="CONTACTOR_CLOSED_SENSE_2" class="0">
 <segment>
+<pinref part="U$1" gate="G$1" pin="19/A5"/>
+<wire x1="-66.04" y1="180.34" x2="-60.96" y2="180.34" width="0.1524" layer="91"/>
+<label x="-60.96" y="180.34" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="CONTACTOR_CLOSED_SENSE_1" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="18/A4"/>
+<wire x1="-66.04" y1="177.8" x2="-60.96" y2="177.8" width="0.1524" layer="91"/>
+<label x="-60.96" y="177.8" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="CHARGE_1" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="14/A0"/>
+<wire x1="-66.04" y1="167.64" x2="-60.96" y2="167.64" width="0.1524" layer="91"/>
+<label x="-60.96" y="167.64" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="PRECHARGE_EN_1" class="0">
+<segment>
 <pinref part="U$1" gate="G$1" pin="17/A3"/>
 <wire x1="-66.04" y1="175.26" x2="-60.96" y2="175.26" width="0.1524" layer="91"/>
 <label x="-60.96" y="175.26" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="CONTACTOR_CLOSED_SENSE_1" class="0">
+<net name="PRECHARGE_EN_2" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="16/A2"/>
 <wire x1="-66.04" y1="172.72" x2="-60.96" y2="172.72" width="0.1524" layer="91"/>
@@ -8399,6 +8692,18 @@ Polyswitch Resetable Fuses</description>
 <instance part="R25" gate="G$1" x="-43.18" y="86.36" rot="R180"/>
 <instance part="AGND2" gate="VR1" x="-33.02" y="88.9"/>
 <instance part="AGND3" gate="VR1" x="-33.02" y="76.2"/>
+<instance part="IC6" gate="A" x="12.7" y="104.14" rot="R90"/>
+<instance part="IC7" gate="A" x="12.7" y="81.28" rot="R270"/>
+<instance part="IC6" gate="P" x="55.88" y="121.92"/>
+<instance part="IC7" gate="P" x="76.2" y="121.92"/>
+<instance part="GND74" gate="1" x="76.2" y="109.22"/>
+<instance part="GND75" gate="1" x="55.88" y="111.76"/>
+<instance part="P+33" gate="1" x="55.88" y="139.7"/>
+<instance part="P+34" gate="1" x="76.2" y="139.7"/>
+<instance part="C9" gate="G$1" x="53.34" y="132.08" rot="R90"/>
+<instance part="C10" gate="G$1" x="73.66" y="132.08" rot="R90"/>
+<instance part="GND76" gate="1" x="68.58" y="129.54"/>
+<instance part="GND77" gate="1" x="48.26" y="129.54"/>
 </instances>
 <busses>
 </busses>
@@ -8406,21 +8711,27 @@ Polyswitch Resetable Fuses</description>
 <net name="CHARGE_1" class="0">
 <segment>
 <wire x1="-10.16" y1="99.06" x2="-5.08" y2="99.06" width="0.1524" layer="91"/>
-<label x="2.54" y="99.06" size="1.27" layer="95" xref="yes"/>
+<label x="22.86" y="99.06" size="1.27" layer="95" xref="yes"/>
 <pinref part="IC3" gate="G$1" pin="CT1"/>
 <pinref part="R23" gate="G$1" pin="1"/>
-<wire x1="-5.08" y1="99.06" x2="2.54" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="99.06" x2="12.7" y2="99.06" width="0.1524" layer="91"/>
 <junction x="-5.08" y="99.06"/>
+<pinref part="IC6" gate="A" pin="I"/>
+<wire x1="12.7" y1="99.06" x2="22.86" y2="99.06" width="0.1524" layer="91"/>
+<junction x="12.7" y="99.06"/>
 </segment>
 </net>
 <net name="CHARGE_2" class="0">
 <segment>
 <wire x1="-10.16" y1="86.36" x2="-5.08" y2="86.36" width="0.1524" layer="91"/>
-<label x="2.54" y="86.36" size="1.27" layer="95" xref="yes"/>
+<label x="22.86" y="86.36" size="1.27" layer="95" xref="yes"/>
 <pinref part="IC3" gate="G$1" pin="CT2"/>
 <pinref part="R26" gate="G$1" pin="1"/>
-<wire x1="-5.08" y1="86.36" x2="2.54" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="86.36" x2="12.7" y2="86.36" width="0.1524" layer="91"/>
 <junction x="-5.08" y="86.36"/>
+<pinref part="IC7" gate="A" pin="I"/>
+<wire x1="12.7" y1="86.36" x2="22.86" y2="86.36" width="0.1524" layer="91"/>
+<junction x="12.7" y="86.36"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -8432,6 +8743,23 @@ Polyswitch Resetable Fuses</description>
 <pinref part="IC3" gate="G$1" pin="ET1"/>
 <pinref part="GND49" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="IC7" gate="P" pin="GND"/>
+<pinref part="GND74" gate="1" pin="GND"/>
+<wire x1="76.2" y1="114.3" x2="76.2" y2="111.76" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC6" gate="P" pin="GND"/>
+<pinref part="GND75" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C10" gate="G$1" pin="1"/>
+<pinref part="GND76" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C9" gate="G$1" pin="1"/>
+<pinref part="GND77" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="+5V" class="0">
 <segment>
@@ -8442,6 +8770,22 @@ Polyswitch Resetable Fuses</description>
 <pinref part="R26" gate="G$1" pin="2"/>
 <wire x1="-5.08" y1="96.52" x2="0" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="P+19" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="IC6" gate="P" pin="VCC"/>
+<pinref part="P+33" gate="1" pin="+5V"/>
+<wire x1="55.88" y1="137.16" x2="55.88" y2="132.08" width="0.1524" layer="91"/>
+<pinref part="C9" gate="G$1" pin="2"/>
+<wire x1="55.88" y1="132.08" x2="55.88" y2="129.54" width="0.1524" layer="91"/>
+<junction x="55.88" y="132.08"/>
+</segment>
+<segment>
+<pinref part="IC7" gate="P" pin="VCC"/>
+<pinref part="P+34" gate="1" pin="+5V"/>
+<wire x1="76.2" y1="137.16" x2="76.2" y2="132.08" width="0.1524" layer="91"/>
+<pinref part="C10" gate="G$1" pin="2"/>
+<wire x1="76.2" y1="132.08" x2="76.2" y2="129.54" width="0.1524" layer="91"/>
+<junction x="76.2" y="132.08"/>
 </segment>
 </net>
 <net name="N$32" class="0">
@@ -8480,6 +8824,20 @@ Polyswitch Resetable Fuses</description>
 <segment>
 <pinref part="IC3" gate="G$1" pin="C2"/>
 <pinref part="AGND3" gate="VR1" pin="AGND"/>
+</segment>
+</net>
+<net name="CONTACT_EN_2" class="0">
+<segment>
+<pinref part="IC7" gate="A" pin="O"/>
+<wire x1="12.7" y1="71.12" x2="33.02" y2="71.12" width="0.1524" layer="91"/>
+<label x="33.02" y="71.12" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="CONTACT_EN_1" class="0">
+<segment>
+<pinref part="IC6" gate="A" pin="O"/>
+<wire x1="12.7" y1="114.3" x2="30.48" y2="114.3" width="0.1524" layer="91"/>
+<label x="30.48" y="114.3" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -8625,17 +8983,17 @@ Must order in multiples of 2</text>
 </plain>
 <instances>
 <instance part="PRECHARGE_FUSE" gate="G$1" x="-86.36" y="195.58" rot="R180"/>
-<instance part="PRECHARGE_RELAY" gate="1" x="-25.4" y="162.56"/>
-<instance part="PRECHARGE_RELAY" gate="2" x="20.32" y="180.34"/>
-<instance part="PRECHARGE_RELAY" gate="3" x="20.32" y="160.02"/>
+<instance part="PRECHARGE_RELAY" gate="1" x="-96.52" y="119.38"/>
+<instance part="PRECHARGE_RELAY" gate="2" x="-50.8" y="137.16"/>
+<instance part="PRECHARGE_RELAY" gate="3" x="-50.8" y="116.84"/>
 <instance part="R33" gate="G$1" x="139.7" y="147.32" rot="R270"/>
-<instance part="R34" gate="G$1" x="-48.26" y="137.16" rot="R270"/>
-<instance part="Q9" gate="G$1" x="-35.56" y="144.78"/>
+<instance part="R34" gate="G$1" x="-119.38" y="93.98" rot="R270"/>
+<instance part="Q9" gate="G$1" x="-106.68" y="101.6"/>
 <instance part="LM393M" gate="A" x="116.84" y="134.62"/>
 <instance part="74HC125M" gate="A" x="177.8" y="137.16"/>
-<instance part="R36" gate="G$1" x="50.8" y="177.8" rot="R90"/>
+<instance part="R36" gate="G$1" x="-20.32" y="134.62" rot="R90"/>
 <instance part="R37" gate="G$1" x="-38.1" y="218.44" rot="R180"/>
-<instance part="R38" gate="G$1" x="50.8" y="165.1" rot="R90"/>
+<instance part="R38" gate="G$1" x="-20.32" y="121.92" rot="R90"/>
 <instance part="R39" gate="G$1" x="-25.4" y="218.44" rot="R180"/>
 <instance part="R40" gate="G$1" x="-17.78" y="213.36" rot="R90"/>
 <instance part="SUPPLY1" gate="G$1" x="160.02" y="147.32"/>
@@ -8644,28 +9002,26 @@ Must order in multiples of 2</text>
 <instance part="GND50" gate="VR1" x="99.06" y="119.38"/>
 <instance part="GND51" gate="VR1" x="-17.78" y="200.66"/>
 <instance part="GND58" gate="VR1" x="160.02" y="116.84"/>
-<instance part="GND60" gate="VR1" x="50.8" y="154.94"/>
-<instance part="SUPPLY4" gate="G$1" x="-35.56" y="175.26"/>
-<instance part="D6" gate="G$1" x="-35.56" y="162.56" rot="R90"/>
-<instance part="PRECHARGE_RELAY1" gate="1" x="-30.48" y="55.88"/>
-<instance part="PRECHARGE_RELAY1" gate="2" x="15.24" y="73.66"/>
-<instance part="PRECHARGE_RELAY1" gate="3" x="15.24" y="53.34"/>
-<instance part="R41" gate="G$1" x="-53.34" y="30.48" rot="R270"/>
-<instance part="Q11" gate="G$1" x="-40.64" y="38.1"/>
-<instance part="R42" gate="G$1" x="45.72" y="71.12" rot="R90"/>
-<instance part="R43" gate="G$1" x="45.72" y="58.42" rot="R90"/>
-<instance part="GND64" gate="VR1" x="45.72" y="48.26"/>
-<instance part="SUPPLY3" gate="G$1" x="-40.64" y="68.58"/>
-<instance part="D7" gate="G$1" x="-40.64" y="55.88" rot="R90"/>
+<instance part="GND60" gate="VR1" x="-20.32" y="111.76"/>
+<instance part="D6" gate="G$1" x="-106.68" y="119.38" rot="R90"/>
+<instance part="PRECHARGE_RELAY1" gate="1" x="-101.6" y="66.04"/>
+<instance part="PRECHARGE_RELAY1" gate="2" x="-55.88" y="83.82"/>
+<instance part="PRECHARGE_RELAY1" gate="3" x="-55.88" y="63.5"/>
+<instance part="R41" gate="G$1" x="-124.46" y="40.64" rot="R270"/>
+<instance part="Q11" gate="G$1" x="-111.76" y="48.26"/>
+<instance part="R42" gate="G$1" x="-25.4" y="81.28" rot="R90"/>
+<instance part="R43" gate="G$1" x="-25.4" y="68.58" rot="R90"/>
+<instance part="GND64" gate="VR1" x="-25.4" y="58.42"/>
+<instance part="D7" gate="G$1" x="-111.76" y="66.04" rot="R90"/>
 <instance part="R45" gate="G$1" x="139.7" y="134.62" rot="R90"/>
 <instance part="SUPPLY5" gate="G$1" x="139.7" y="129.54" rot="R180"/>
 <instance part="U$5" gate="G$1" x="124.46" y="175.26"/>
 <instance part="P+29" gate="1" x="111.76" y="193.04"/>
 <instance part="SUPPLY6" gate="G$1" x="157.48" y="190.5"/>
-<instance part="X2" gate="-1" x="0" y="157.48"/>
-<instance part="X2" gate="-2" x="0" y="177.8"/>
-<instance part="X3" gate="-1" x="10.16" y="30.48"/>
-<instance part="X3" gate="-2" x="-2.54" y="71.12"/>
+<instance part="X2" gate="-1" x="-71.12" y="114.3"/>
+<instance part="X2" gate="-2" x="-71.12" y="134.62"/>
+<instance part="X3" gate="-1" x="-60.96" y="40.64"/>
+<instance part="X3" gate="-2" x="-73.66" y="81.28"/>
 <instance part="X4" gate="-1" x="-109.22" y="195.58"/>
 <instance part="X4" gate="-2" x="-109.22" y="200.66"/>
 <instance part="X5" gate="-1" x="-109.22" y="185.42"/>
@@ -8676,27 +9032,35 @@ Must order in multiples of 2</text>
 <instance part="GND46" gate="VR1" x="160.02" y="127"/>
 <instance part="GND47" gate="VR1" x="160.02" y="129.54"/>
 <instance part="GND66" gate="1" x="109.22" y="177.8"/>
-<instance part="AGND4" gate="VR1" x="-48.26" y="121.92"/>
-<instance part="AGND5" gate="VR1" x="-35.56" y="132.08"/>
-<instance part="AGND6" gate="VR1" x="-53.34" y="17.78"/>
-<instance part="AGND7" gate="VR1" x="-40.64" y="25.4"/>
 <instance part="GND54" gate="VR1" x="-63.5" y="198.12"/>
-<instance part="AGND8" gate="VR1" x="27.94" y="162.56"/>
-<instance part="AGND9" gate="VR1" x="22.86" y="55.88"/>
+<instance part="AGND8" gate="VR1" x="-43.18" y="119.38"/>
+<instance part="AGND9" gate="VR1" x="-40.64" y="66.04"/>
+<instance part="GND55" gate="1" x="-111.76" y="40.64"/>
+<instance part="GND56" gate="1" x="-124.46" y="33.02"/>
+<instance part="GND57" gate="1" x="-106.68" y="93.98"/>
+<instance part="GND61" gate="1" x="-119.38" y="86.36"/>
+<instance part="P+28" gate="1" x="-106.68" y="127"/>
+<instance part="P+30" gate="1" x="-111.76" y="73.66"/>
+<instance part="R48" gate="G$1" x="-149.86" y="101.6"/>
+<instance part="R49" gate="G$1" x="-144.78" y="48.26"/>
+<instance part="X6" gate="-1" x="-172.72" y="63.5"/>
+<instance part="X6" gate="-2" x="-180.34" y="58.42"/>
+<instance part="X6" gate="-3" x="-162.56" y="48.26"/>
+<instance part="X6" gate="-4" x="-162.56" y="53.34"/>
+<instance part="GND63" gate="1" x="-165.1" y="63.5" rot="R90"/>
+<instance part="P+31" gate="1" x="-162.56" y="60.96"/>
+<instance part="F2" gate="G$1" x="-170.18" y="58.42"/>
+<instance part="D12" gate="G$1" x="-134.62" y="45.72"/>
+<instance part="D13" gate="G$1" x="-139.7" y="99.06"/>
+<instance part="GND67" gate="1" x="-144.78" y="91.44"/>
+<instance part="P+32" gate="1" x="-137.16" y="91.44" rot="R90"/>
+<instance part="GND68" gate="1" x="-139.7" y="43.18"/>
+<instance part="P+35" gate="1" x="-132.08" y="40.64"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="5V" class="0">
-<segment>
-<wire x1="-25.4" y1="167.64" x2="-35.56" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="-35.56" y1="167.64" x2="-35.56" y2="165.1" width="0.1524" layer="91"/>
-<pinref part="PRECHARGE_RELAY" gate="1" pin="+"/>
-<wire x1="-35.56" y1="167.64" x2="-35.56" y2="175.26" width="0.1524" layer="91"/>
-<pinref part="SUPPLY4" gate="G$1" pin="5V"/>
-<junction x="-35.56" y="167.64"/>
-<pinref part="D6" gate="G$1" pin="C"/>
-</segment>
 <segment>
 <pinref part="LM393M" gate="A" pin="VCC"/>
 <pinref part="SUPPLY8" gate="G$1" pin="5V"/>
@@ -8710,15 +9074,6 @@ Must order in multiples of 2</text>
 <segment>
 <pinref part="74HC125M" gate="A" pin="VCC"/>
 <pinref part="SUPPLY1" gate="G$1" pin="5V"/>
-</segment>
-<segment>
-<wire x1="-30.48" y1="60.96" x2="-40.64" y2="60.96" width="0.2032" layer="91"/>
-<wire x1="-40.64" y1="60.96" x2="-40.64" y2="58.42" width="0.2032" layer="91"/>
-<pinref part="PRECHARGE_RELAY1" gate="1" pin="+"/>
-<wire x1="-40.64" y1="60.96" x2="-40.64" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="SUPPLY3" gate="G$1" pin="5V"/>
-<junction x="-40.64" y="60.96"/>
-<pinref part="D7" gate="G$1" pin="C"/>
 </segment>
 <segment>
 <pinref part="R45" gate="G$1" pin="1"/>
@@ -8742,18 +9097,13 @@ Must order in multiples of 2</text>
 </segment>
 <segment>
 <pinref part="PRECHARGE_RELAY" gate="3" pin="O"/>
-<wire x1="25.4" y1="165.1" x2="27.94" y2="165.1" width="0.2032" layer="91"/>
+<wire x1="-45.72" y1="121.92" x2="-43.18" y2="121.92" width="0.2032" layer="91"/>
 <pinref part="AGND8" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="R38" gate="G$1" pin="1"/>
 <pinref part="GND60" gate="VR1" pin="AGND"/>
-<wire x1="50.8" y1="160.02" x2="50.8" y2="157.48" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="Q9" gate="G$1" pin="S"/>
-<wire x1="-35.56" y1="134.62" x2="-35.56" y2="139.7" width="0.1524" layer="91"/>
-<pinref part="AGND5" gate="VR1" pin="AGND"/>
+<wire x1="-20.32" y1="116.84" x2="-20.32" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="74HC125M" gate="A" pin="GND"/>
@@ -8761,23 +9111,13 @@ Must order in multiples of 2</text>
 </segment>
 <segment>
 <pinref part="PRECHARGE_RELAY1" gate="3" pin="O"/>
-<wire x1="20.32" y1="58.42" x2="22.86" y2="58.42" width="0.2032" layer="91"/>
+<wire x1="-50.8" y1="68.58" x2="-40.64" y2="68.58" width="0.2032" layer="91"/>
 <pinref part="AGND9" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="R43" gate="G$1" pin="1"/>
 <pinref part="GND64" gate="VR1" pin="AGND"/>
-<wire x1="45.72" y1="53.34" x2="45.72" y2="50.8" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="Q11" gate="G$1" pin="S"/>
-<wire x1="-40.64" y1="27.94" x2="-40.64" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="AGND7" gate="VR1" pin="AGND"/>
-</segment>
-<segment>
-<pinref part="R41" gate="G$1" pin="2"/>
-<wire x1="-53.34" y1="20.32" x2="-53.34" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="AGND6" gate="VR1" pin="AGND"/>
+<wire x1="-25.4" y1="63.5" x2="-25.4" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$5" gate="G$1" pin="-VOUT"/>
@@ -8801,11 +9141,6 @@ Must order in multiples of 2</text>
 <pinref part="GND47" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
-<pinref part="R34" gate="G$1" pin="2"/>
-<wire x1="-48.26" y1="124.46" x2="-48.26" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="AGND4" gate="VR1" pin="AGND"/>
-</segment>
-<segment>
 <pinref part="X4" gate="-2" pin="KL"/>
 <pinref part="GND54" gate="VR1" pin="AGND"/>
 <wire x1="-63.5" y1="200.66" x2="-104.14" y2="200.66" width="0.1524" layer="91"/>
@@ -8813,13 +9148,18 @@ Must order in multiples of 2</text>
 </net>
 <net name="PRECHARGE_EN_2" class="0">
 <segment>
-<wire x1="-48.26" y1="38.1" x2="-53.34" y2="38.1" width="0.2032" layer="91"/>
-<label x="-60.96" y="38.1" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="-53.34" y1="38.1" x2="-60.96" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="-53.34" y1="35.56" x2="-53.34" y2="38.1" width="0.1524" layer="91"/>
-<junction x="-53.34" y="38.1"/>
+<wire x1="-119.38" y1="48.26" x2="-124.46" y2="48.26" width="0.2032" layer="91"/>
+<wire x1="-124.46" y1="45.72" x2="-124.46" y2="48.26" width="0.1524" layer="91"/>
+<junction x="-124.46" y="48.26"/>
 <pinref part="R41" gate="G$1" pin="1"/>
 <pinref part="Q11" gate="G$1" pin="G"/>
+<pinref part="R49" gate="G$1" pin="2"/>
+<wire x1="-124.46" y1="48.26" x2="-134.62" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="48.26" x2="-139.7" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="48.26" x2="-134.62" y2="55.88" width="0.1524" layer="91"/>
+<junction x="-134.62" y="48.26"/>
+<label x="-134.62" y="55.88" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="D12" gate="G$1" pin="C1A2"/>
 </segment>
 </net>
 <net name="96V_IN_FUSED" class="0">
@@ -8835,22 +9175,22 @@ Must order in multiples of 2</text>
 </segment>
 <segment>
 <pinref part="PRECHARGE_RELAY" gate="2" pin="S"/>
-<wire x1="15.24" y1="185.42" x2="10.16" y2="185.42" width="0.1524" layer="91"/>
-<label x="10.16" y="185.42" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="-55.88" y1="142.24" x2="-60.96" y2="142.24" width="0.1524" layer="91"/>
+<label x="-60.96" y="142.24" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="PRECHARGE_RELAY1" gate="2" pin="S"/>
-<wire x1="10.16" y1="78.74" x2="5.08" y2="78.74" width="0.2032" layer="91"/>
-<label x="5.08" y="78.74" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="-60.96" y1="88.9" x2="-66.04" y2="88.9" width="0.2032" layer="91"/>
+<label x="-66.04" y="88.9" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PRECH_DRAIN" class="0">
 <segment>
-<wire x1="-35.56" y1="160.02" x2="-35.56" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="-35.56" y1="157.48" x2="-25.4" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="-106.68" y1="116.84" x2="-106.68" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="-106.68" y1="114.3" x2="-96.52" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="PRECHARGE_RELAY" gate="1" pin="-"/>
-<wire x1="-35.56" y1="157.48" x2="-35.56" y2="149.86" width="0.1524" layer="91"/>
-<junction x="-35.56" y="157.48"/>
+<wire x1="-106.68" y1="114.3" x2="-106.68" y2="106.68" width="0.1524" layer="91"/>
+<junction x="-106.68" y="114.3"/>
 <pinref part="Q9" gate="G$1" pin="D"/>
 <pinref part="D6" gate="G$1" pin="A"/>
 </segment>
@@ -8892,7 +9232,7 @@ Must order in multiples of 2</text>
 <net name="PRECHARGE_RESISTOR_IN_1" class="0">
 <segment>
 <pinref part="PRECHARGE_RELAY" gate="2" pin="P"/>
-<wire x1="20.32" y1="177.8" x2="5.08" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="134.62" x2="-66.04" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="X2" gate="-2" pin="KL"/>
 </segment>
 </net>
@@ -8911,11 +9251,11 @@ Must order in multiples of 2</text>
 </net>
 <net name="PRECH_DRAIN1" class="0">
 <segment>
-<wire x1="-40.64" y1="53.34" x2="-40.64" y2="50.8" width="0.2032" layer="91"/>
-<wire x1="-40.64" y1="50.8" x2="-30.48" y2="50.8" width="0.2032" layer="91"/>
+<wire x1="-111.76" y1="63.5" x2="-111.76" y2="60.96" width="0.2032" layer="91"/>
+<wire x1="-111.76" y1="60.96" x2="-101.6" y2="60.96" width="0.2032" layer="91"/>
 <pinref part="PRECHARGE_RELAY1" gate="1" pin="-"/>
-<wire x1="-40.64" y1="50.8" x2="-40.64" y2="43.18" width="0.1524" layer="91"/>
-<junction x="-40.64" y="50.8"/>
+<wire x1="-111.76" y1="60.96" x2="-111.76" y2="53.34" width="0.1524" layer="91"/>
+<junction x="-111.76" y="60.96"/>
 <pinref part="Q11" gate="G$1" pin="D"/>
 <pinref part="D7" gate="G$1" pin="A"/>
 </segment>
@@ -8923,36 +9263,43 @@ Must order in multiples of 2</text>
 <net name="PRECHARGE_RESISTOR_IN_2" class="0">
 <segment>
 <pinref part="PRECHARGE_RELAY1" gate="2" pin="P"/>
-<wire x1="15.24" y1="71.12" x2="2.54" y2="71.12" width="0.2032" layer="91"/>
+<wire x1="-55.88" y1="81.28" x2="-68.58" y2="81.28" width="0.2032" layer="91"/>
 <pinref part="X3" gate="-2" pin="KL"/>
 </segment>
 </net>
 <net name="PRECHARGE_EN_1" class="0">
 <segment>
-<wire x1="-43.18" y1="144.78" x2="-48.26" y2="144.78" width="0.1524" layer="91"/>
-<label x="-55.88" y="144.78" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="-48.26" y1="144.78" x2="-55.88" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="-48.26" y1="142.24" x2="-48.26" y2="144.78" width="0.1524" layer="91"/>
-<junction x="-48.26" y="144.78"/>
+<wire x1="-114.3" y1="101.6" x2="-119.38" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="-119.38" y1="99.06" x2="-119.38" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="R34" gate="G$1" pin="1"/>
 <pinref part="Q9" gate="G$1" pin="G"/>
+<pinref part="R48" gate="G$1" pin="2"/>
+<wire x1="-119.38" y1="101.6" x2="-129.54" y2="101.6" width="0.1524" layer="91"/>
+<junction x="-119.38" y="101.6"/>
+<wire x1="-129.54" y1="101.6" x2="-139.7" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="-139.7" y1="101.6" x2="-144.78" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="-129.54" y1="101.6" x2="-129.54" y2="109.22" width="0.1524" layer="91"/>
+<junction x="-129.54" y="101.6"/>
+<label x="-129.54" y="111.76" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="D13" gate="G$1" pin="C1A2"/>
+<junction x="-139.7" y="101.6"/>
 </segment>
 </net>
 <net name="PRECHARGE_OUT_1" class="0">
 <segment>
-<wire x1="50.8" y1="182.88" x2="50.8" y2="185.42" width="0.2032" layer="91"/>
+<wire x1="-20.32" y1="139.7" x2="-20.32" y2="142.24" width="0.2032" layer="91"/>
 <pinref part="R36" gate="G$1" pin="2"/>
 <pinref part="PRECHARGE_RELAY" gate="3" pin="S"/>
-<wire x1="15.24" y1="165.1" x2="15.24" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="-55.88" y1="121.92" x2="-55.88" y2="127" width="0.1524" layer="91"/>
 <pinref part="PRECHARGE_RELAY" gate="2" pin="O"/>
-<label x="33.02" y="190.5" size="1.27" layer="95" rot="R90" xref="yes"/>
-<wire x1="15.24" y1="170.18" x2="25.4" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="170.18" x2="25.4" y2="185.42" width="0.1524" layer="91"/>
-<junction x="25.4" y="185.42"/>
-<wire x1="50.8" y1="185.42" x2="33.02" y2="185.42" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="185.42" x2="25.4" y2="185.42" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="185.42" x2="33.02" y2="190.5" width="0.1524" layer="91"/>
-<junction x="33.02" y="185.42"/>
+<label x="-38.1" y="147.32" size="1.27" layer="95" rot="R90" xref="yes"/>
+<wire x1="-55.88" y1="127" x2="-45.72" y2="127" width="0.1524" layer="91"/>
+<wire x1="-45.72" y1="127" x2="-45.72" y2="142.24" width="0.1524" layer="91"/>
+<junction x="-45.72" y="142.24"/>
+<wire x1="-20.32" y1="142.24" x2="-38.1" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="142.24" x2="-45.72" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="142.24" x2="-38.1" y2="147.32" width="0.1524" layer="91"/>
+<junction x="-38.1" y="142.24"/>
 </segment>
 <segment>
 <wire x1="-104.14" y1="185.42" x2="-99.06" y2="185.42" width="0.2032" layer="91"/>
@@ -8962,12 +9309,12 @@ Must order in multiples of 2</text>
 </net>
 <net name="CAP_CHARGE_V_CURR_1" class="0">
 <segment>
-<wire x1="50.8" y1="172.72" x2="50.8" y2="170.18" width="0.2032" layer="91"/>
-<label x="68.58" y="170.18" size="1.27" layer="95" xref="yes"/>
+<wire x1="-20.32" y1="129.54" x2="-20.32" y2="127" width="0.2032" layer="91"/>
+<label x="-2.54" y="127" size="1.27" layer="95" xref="yes"/>
 <pinref part="R36" gate="G$1" pin="1"/>
 <pinref part="R38" gate="G$1" pin="2"/>
-<wire x1="50.8" y1="170.18" x2="68.58" y2="170.18" width="0.1524" layer="91"/>
-<junction x="50.8" y="170.18"/>
+<wire x1="-20.32" y1="127" x2="-2.54" y2="127" width="0.1524" layer="91"/>
+<junction x="-20.32" y="127"/>
 </segment>
 <segment>
 <wire x1="99.06" y1="137.16" x2="88.9" y2="137.16" width="0.2032" layer="91"/>
@@ -8982,29 +9329,29 @@ Must order in multiples of 2</text>
 <pinref part="LM393M" gate="A" pin="IN2_(+)"/>
 </segment>
 <segment>
-<wire x1="45.72" y1="66.04" x2="45.72" y2="63.5" width="0.2032" layer="91"/>
-<label x="63.5" y="63.5" size="1.27" layer="95" xref="yes"/>
+<wire x1="-25.4" y1="76.2" x2="-25.4" y2="73.66" width="0.2032" layer="91"/>
+<label x="-7.62" y="73.66" size="1.27" layer="95" xref="yes"/>
 <pinref part="R42" gate="G$1" pin="1"/>
 <pinref part="R43" gate="G$1" pin="2"/>
-<wire x1="45.72" y1="63.5" x2="63.5" y2="63.5" width="0.1524" layer="91"/>
-<junction x="45.72" y="63.5"/>
+<wire x1="-25.4" y1="73.66" x2="-7.62" y2="73.66" width="0.1524" layer="91"/>
+<junction x="-25.4" y="73.66"/>
 </segment>
 </net>
 <net name="PRECHARGE_OUT_2" class="0">
 <segment>
-<wire x1="45.72" y1="76.2" x2="45.72" y2="78.74" width="0.2032" layer="91"/>
+<wire x1="-25.4" y1="86.36" x2="-25.4" y2="88.9" width="0.2032" layer="91"/>
 <pinref part="R42" gate="G$1" pin="2"/>
 <pinref part="PRECHARGE_RELAY1" gate="3" pin="S"/>
-<wire x1="10.16" y1="58.42" x2="10.16" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="68.58" x2="-60.96" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="PRECHARGE_RELAY1" gate="2" pin="O"/>
-<label x="27.94" y="83.82" size="1.27" layer="95" rot="R90" xref="yes"/>
-<wire x1="10.16" y1="63.5" x2="20.32" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="63.5" x2="20.32" y2="78.74" width="0.1524" layer="91"/>
-<junction x="20.32" y="78.74"/>
-<wire x1="45.72" y1="78.74" x2="27.94" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="78.74" x2="20.32" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="78.74" x2="27.94" y2="83.82" width="0.1524" layer="91"/>
-<junction x="27.94" y="78.74"/>
+<label x="-43.18" y="93.98" size="1.27" layer="95" rot="R90" xref="yes"/>
+<wire x1="-60.96" y1="73.66" x2="-50.8" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="73.66" x2="-50.8" y2="88.9" width="0.1524" layer="91"/>
+<junction x="-50.8" y="88.9"/>
+<wire x1="-25.4" y1="88.9" x2="-43.18" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="88.9" x2="-50.8" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="88.9" x2="-43.18" y2="93.98" width="0.1524" layer="91"/>
+<junction x="-43.18" y="88.9"/>
 </segment>
 <segment>
 <wire x1="-104.14" y1="180.34" x2="-99.06" y2="180.34" width="0.1524" layer="91"/>
@@ -9033,6 +9380,36 @@ Must order in multiples of 2</text>
 <pinref part="P+29" gate="1" pin="+5V"/>
 <wire x1="111.76" y1="190.5" x2="119.38" y2="190.5" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<wire x1="-96.52" y1="124.46" x2="-106.68" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="-106.68" y1="124.46" x2="-106.68" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="PRECHARGE_RELAY" gate="1" pin="+"/>
+<pinref part="D6" gate="G$1" pin="C"/>
+<pinref part="P+28" gate="1" pin="+5V"/>
+<junction x="-106.68" y="124.46"/>
+</segment>
+<segment>
+<wire x1="-101.6" y1="71.12" x2="-111.76" y2="71.12" width="0.2032" layer="91"/>
+<wire x1="-111.76" y1="71.12" x2="-111.76" y2="68.58" width="0.2032" layer="91"/>
+<pinref part="PRECHARGE_RELAY1" gate="1" pin="+"/>
+<pinref part="D7" gate="G$1" pin="C"/>
+<pinref part="P+30" gate="1" pin="+5V"/>
+<junction x="-111.76" y="71.12"/>
+</segment>
+<segment>
+<pinref part="F2" gate="G$1" pin="2"/>
+<pinref part="P+31" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="D13" gate="G$1" pin="C2"/>
+<pinref part="P+32" gate="1" pin="+5V"/>
+<wire x1="-134.62" y1="91.44" x2="-134.62" y2="99.06" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="D12" gate="G$1" pin="C2"/>
+<pinref part="P+35" gate="1" pin="+5V"/>
+<wire x1="-132.08" y1="38.1" x2="-129.54" y2="45.72" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="CHARGE_ISO_2" class="0">
 <segment>
@@ -9045,14 +9422,14 @@ Must order in multiples of 2</text>
 <segment>
 <pinref part="PRECHARGE_RELAY" gate="3" pin="P"/>
 <pinref part="X2" gate="-1" pin="KL"/>
-<wire x1="5.08" y1="157.48" x2="20.32" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="114.3" x2="-50.8" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$41" class="0">
 <segment>
 <pinref part="PRECHARGE_RELAY1" gate="3" pin="P"/>
 <pinref part="X3" gate="-1" pin="KL"/>
-<wire x1="15.24" y1="30.48" x2="15.24" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="-55.88" y1="40.64" x2="-55.88" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$42" class="0">
@@ -9067,6 +9444,56 @@ Must order in multiples of 2</text>
 <pinref part="U$5" gate="G$1" pin="-VIN"/>
 <pinref part="GND66" gate="1" pin="GND"/>
 <wire x1="109.22" y1="180.34" x2="119.38" y2="180.34" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="Q11" gate="G$1" pin="S"/>
+<pinref part="GND55" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="R41" gate="G$1" pin="2"/>
+<pinref part="GND56" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="Q9" gate="G$1" pin="S"/>
+<pinref part="GND57" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="R34" gate="G$1" pin="2"/>
+<pinref part="GND61" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="X6" gate="-1" pin="KL"/>
+<pinref part="GND63" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="D13" gate="G$1" pin="A1"/>
+<pinref part="GND67" gate="1" pin="GND"/>
+<wire x1="-144.78" y1="93.98" x2="-144.78" y2="99.06" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="D12" gate="G$1" pin="A1"/>
+<pinref part="GND68" gate="1" pin="GND"/>
+</segment>
+</net>
+<net name="N$36" class="0">
+<segment>
+<pinref part="R48" gate="G$1" pin="1"/>
+<wire x1="-154.94" y1="101.6" x2="-157.48" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="-157.48" y1="53.34" x2="-157.48" y2="101.6" width="0.1524" layer="91"/>
+<pinref part="X6" gate="-4" pin="KL"/>
+</segment>
+</net>
+<net name="N$47" class="0">
+<segment>
+<pinref part="X6" gate="-2" pin="KL"/>
+<pinref part="F2" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$37" class="0">
+<segment>
+<pinref part="R49" gate="G$1" pin="1"/>
+<pinref part="X6" gate="-3" pin="KL"/>
+<wire x1="-157.48" y1="48.26" x2="-149.86" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
@@ -9089,8 +9516,6 @@ Must order in multiples of 2</text>
 <instance part="D11" gate="G$1" x="68.58" y="81.28" rot="R90"/>
 <instance part="P+26" gate="1" x="68.58" y="96.52"/>
 <instance part="P+27" gate="1" x="66.04" y="-5.08"/>
-<instance part="GND73" gate="1" x="93.98" y="73.66"/>
-<instance part="GND74" gate="1" x="93.98" y="-27.94"/>
 <instance part="P+20" gate="1" x="106.68" y="-22.86"/>
 <instance part="P+21" gate="1" x="101.6" y="78.74"/>
 <instance part="PF1" gate="G$1" x="114.3" y="-25.4"/>
@@ -9117,6 +9542,9 @@ Must order in multiples of 2</text>
 <instance part="D9" gate="G$1" x="53.34" y="10.16" rot="R180"/>
 <instance part="P+24" gate="1" x="48.26" y="12.7"/>
 <instance part="GND59" gate="1" x="58.42" y="12.7" rot="R180"/>
+<instance part="X1" gate="-1" x="170.18" y="38.1"/>
+<instance part="X1" gate="-2" x="170.18" y="33.02"/>
+<instance part="GND62" gate="1" x="175.26" y="30.48"/>
 </instances>
 <busses>
 </busses>
@@ -9139,16 +9567,6 @@ Must order in multiples of 2</text>
 <pinref part="GND71" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U$7" gate="G$1" pin="10"/>
-<pinref part="GND73" gate="1" pin="GND"/>
-<wire x1="93.98" y1="76.2" x2="88.9" y2="76.2" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U$8" gate="G$1" pin="10"/>
-<pinref part="GND74" gate="1" pin="GND"/>
-<wire x1="93.98" y1="-25.4" x2="86.36" y2="-25.4" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="GND52" gate="1" pin="GND"/>
 <wire x1="109.22" y1="12.7" x2="116.84" y2="12.7" width="0.1524" layer="91"/>
 <pinref part="CONTACTOR_2" gate="-1" pin="KL"/>
@@ -9166,6 +9584,10 @@ Must order in multiples of 2</text>
 <segment>
 <pinref part="D9" gate="G$1" pin="A1"/>
 <pinref part="GND59" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="X1" gate="-2" pin="KL"/>
+<pinref part="GND62" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="CONTACT_EN_1" class="0">
@@ -9336,6 +9758,23 @@ Must order in multiples of 2</text>
 <pinref part="R44" gate="G$1" pin="1"/>
 <pinref part="D8" gate="G$1" pin="C1A2"/>
 <junction x="55.88" y="109.22"/>
+</segment>
+</net>
+<net name="CONTACTOR_GND" class="0">
+<segment>
+<pinref part="X1" gate="-1" pin="KL"/>
+<wire x1="175.26" y1="38.1" x2="180.34" y2="38.1" width="0.1524" layer="91"/>
+<label x="180.34" y="38.1" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="10"/>
+<wire x1="93.98" y1="-25.4" x2="86.36" y2="-25.4" width="0.1524" layer="91"/>
+<label x="93.98" y="-25.4" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$7" gate="G$1" pin="10"/>
+<wire x1="93.98" y1="76.2" x2="88.9" y2="76.2" width="0.1524" layer="91"/>
+<label x="93.98" y="76.2" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 </nets>
