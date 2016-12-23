@@ -11,14 +11,14 @@ namespace CAN {
 
 	void setup()
 	{
-	    heartbeat.age = 0;
+	    heartbeat.timestamp = 0;
 	    CANbus.begin();
 	}
 
 	void setHeartbeat(uint8_t rolling_counter){
 	    if(heartbeat.last_value != rolling_counter){
 	        heartbeat.last_value = rolling_counter;
-	        heartbeat.age = millis();
+	        heartbeat.timestamp = millis();
 	    }
 	}
 	/*
@@ -82,13 +82,21 @@ namespace CAN {
 	{
 	    return pack;
 	}
+ 
+  /* 
+   * Return age of last heartbeat
+   * @return unsigned long
+   */
+  unsigned long heartbeatAge(){
+    return millis() - heartbeat.timestamp;
+  }
 
 	/* 
    * Return currentness of CAN data
 	 * @return bool
 	 */
 	bool isCurrent(){
-	    if((millis() - heartbeat.age) < HEARTBEAT_TIMEOUT){
+	    if(heartbeatAge() < HEARTBEAT_TIMEOUT){
 	        return true;
 	    }else{
 	        return false;

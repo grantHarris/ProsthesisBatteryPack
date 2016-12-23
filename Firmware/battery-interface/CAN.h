@@ -46,7 +46,7 @@ struct pack_t {
 
 struct heartbeat_t {
     unsigned int last_value;
-    unsigned long age;
+    unsigned long timestamp;
 };
 
 namespace CAN {
@@ -55,6 +55,7 @@ namespace CAN {
     void read();
     temp_t getTempState();
     pack_t getPackState();
+    unsigned long heartbeatAge();
     bool isCurrent();
 };
 
