@@ -26,7 +26,7 @@
 #define PACK_ADDR 0x501
 #define ROLLING_COUNTER_ADDR 0x502
 
-#define HEARTBEAT_TIMEOUT 500
+#define HEARTBEAT_TIMEOUT 1000
   
 struct temp_t {
     int avg;
@@ -36,8 +36,8 @@ struct temp_t {
 };
 
 struct pack_t {
-    unsigned int soc;
-    unsigned int health;
+    int soc;
+    int health;
     int voltage;
     int current;
     int current_adc1;
