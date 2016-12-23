@@ -9,8 +9,16 @@
 #define DEBOUNCE_TIME 20
 
 namespace Inputs {
-  void setup();
-  void read();
+	void setup();
+  	void read();
+    bool isSbx1Present();
+    bool isSbx2Present();
+    bool isContactor1Closed();
+    bool isContactor2Closed();
+    bool isPrecharge1On();
+    bool isPrecharge2On();
+    bool isCharged1();
+    bool isCharged2();
 };
 
 #endif // __Inputs_H__
