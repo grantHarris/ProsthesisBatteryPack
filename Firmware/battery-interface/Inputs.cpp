@@ -68,10 +68,10 @@ namespace Inputs {
         precharge_en_sense_2 = !bounce_precharge_en_sense_2.read();
 
         bounce_charge_sense_1.update();
-        charge_sense_1 = bounce_charge_sense_1.read();
+        charge_sense_1 = !bounce_charge_sense_1.read();
 
         bounce_charge_sense_2.update();
-        charge_sense_2 = bounce_charge_sense_2.read();
+        charge_sense_2 = !bounce_charge_sense_2.read();
 
         yield();
     }
