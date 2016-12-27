@@ -22,3 +22,4 @@ namespace Inputs {
 };
 
 #endif // __Inputs_H__
+

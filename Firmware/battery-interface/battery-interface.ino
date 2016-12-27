@@ -1,3 +1,9 @@
+#include <FlexCAN.h>
+#include <FastLED.h>
+#include <Bounce.h>
+
+#include <kinetis_flexcan.h>
+
 #include <Scheduler.h>
 #include "battery-interface.h"
 
@@ -14,4 +20,5 @@ void setup(void)
 void loop(void)
 {
 }
+
 
