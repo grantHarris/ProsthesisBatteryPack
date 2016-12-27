@@ -11,14 +11,14 @@ namespace CAN {
 
 	void setup()
 	{
-	    heartbeat.age = 0;
+	    heartbeat.timestamp = 0;
 	    CANbus.begin();
 	}
 
 	void setHeartbeat(uint8_t rolling_counter){
 	    if(heartbeat.last_value != rolling_counter){
 	        heartbeat.last_value = rolling_counter;
-	        heartbeat.age = millis();
+	        heartbeat.timestamp = millis();
 	    }
 	}
 	/*
@@ -67,7 +67,7 @@ namespace CAN {
 
 	/*
 	 * Get the latest avg, low, and high pack temp
-	 * @return temp_t struct
+	 * @return temp_t
 	 */
 	temp_t getTempState()
 	{
@@ -76,18 +76,27 @@ namespace CAN {
 
 	/*
 	 * Get the soc, health, voltage, current, current_adc1, current_adc2
-	 * @return pack_t struct
+	 * @return pack_t
 	 */
 	pack_t getPackState()
 	{
 	    return pack;
 	}
+ 
+  /* 
+   * Return age of last heartbeat
+   * @return unsigned long
+   */
+  unsigned long heartbeatAge(){
+    return millis() - heartbeat.timestamp;
+  }
 
-	/*
-	 * @return
+	/* 
+   * Return currentness of CAN data
+	 * @return bool
 	 */
 	bool isCurrent(){
-	    if((heartbeat.age + HEARTBEAT_TIMEOUT) < millis()){
+	    if(heartbeatAge() < HEARTBEAT_TIMEOUT){
 	        return true;
 	    }else{
 	        return false;
