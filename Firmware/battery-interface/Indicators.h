@@ -9,15 +9,34 @@
 
 #define NUM_LEDS 188
 
-#define COLOR_ORDER GRB
+#define COLOR_ORDER BGR
 #define UPDATES_PER_SECOND 100
 
 namespace Indicators {	
 	void setup();
+  void setupMapping();
+  
+  void update();
+  void updateIndicators();
+  
 	void setSOC(uint8_t percentage);
 	void setSBXState(uint8_t sbx, bool state);
-	void update();
-};
+  
+  class LEDSection {
+    public:
+      LEDSection(uint16_t _offset, uint16_t _size);
+      void setColor(CHSV _color);
+      void render();
+      void renderColorFill(CHSV _color);
+      void clear();
 
-
+      CHSV color;
+      uint16_t *map;
+      
+    private:
+      uint16_t offset;
+      uint16_t size;
+  };
+}
 #endif // __Indicators_H__
+
