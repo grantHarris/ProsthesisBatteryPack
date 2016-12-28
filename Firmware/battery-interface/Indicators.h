@@ -37,6 +37,16 @@ namespace Indicators {
       uint16_t offset;
       uint16_t size;
   };
+
+  class SBXConnector {
+    public:
+      SBXConnector(LEDSection *sbxLower, LEDSection *sbxUpper);
+      void setInsertionState(bool state);
+      void setContactorState(bool state);
+    private:
+      LEDSection *_sbxLower;
+      LEDSection *_sbxUpper;
+  };
 }
 #endif // __Indicators_H__
 
