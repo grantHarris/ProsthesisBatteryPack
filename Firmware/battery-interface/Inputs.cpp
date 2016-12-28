@@ -62,10 +62,10 @@ namespace Inputs {
         contactor_sense_left = !bounce_contactor_sense_left.read();
 
         bounce_precharge_en_sense_right.update();
-        precharge_en_sense_right = !bounce_precharge_en_sense_right.read();
+        precharge_en_sense_right = bounce_precharge_en_sense_right.read();
 
         bounce_precharge_en_sense_left.update();
-        precharge_en_sense_left = !bounce_precharge_en_sense_left.read();
+        precharge_en_sense_left = bounce_precharge_en_sense_left.read();
 
         bounce_charge_sense_right.update();
         charge_sense_right = !bounce_charge_sense_right.read();
