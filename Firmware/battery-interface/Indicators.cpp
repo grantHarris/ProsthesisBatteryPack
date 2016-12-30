@@ -1,9 +1,7 @@
 #include "Indicators.h"
-#include "Inputs.h"
 
 namespace Indicators {
     CRGB buf[NUM_LEDS];
-
     CRGB smoothedBuf[NUM_LEDS];
 
     // SOC Map
@@ -18,8 +16,8 @@ namespace Indicators {
     // ARROWS
     LEDSection *arrowRight;         LEDSection *arrowLeft;
 
-    SBXConnector *sbxRight;
-    SBXConnector *sbxLeft;
+    PowerChannel *sbxRight;
+    PowerChannel *sbxLeft;
 
     // SmoothedControls
     float smoothedSOCPercentage = 0.;
@@ -51,36 +49,75 @@ namespace Indicators {
         sbxRightLower->setColor(CHSV(0,0,0));
         sbxLeftUpper->setColor(CHSV(0,0,0));
         sbxLeftLower->setColor(CHSV(0,0,0));
-        
-         // Setup level colors
-        for( int i = 0; i < 2; i++) levels[i]->setColor(CHSV(0,255,150));     // Red
-        for( int i = 2; i < 3; i++) levels[i]->setColor(CHSV(60,255,150));    // Yellow
-        for( int i = 3; i < 11; i++) levels[i]->setColor(CHSV(97,255,150));   // Green
 
-        sbxRight = new SBXConnector(sbxRightLower, sbxRightUpper);
-        sbxLeft = new SBXConnector(sbxLeftLower, sbxLeftUpper);
+        sbxRight = new PowerChannel(sbxRightLower, sbxRightUpper, socRightBracket, socRightArrow);
+        sbxLeft = new PowerChannel(sbxLeftLower, sbxLeftUpper, socLeftBracket, socLeftArrow);
     }
   
     void setSOC(uint8_t percentage)
     { 
         float alpha = 0.0075;
         smoothedSOCPercentage = ((1-alpha) * smoothedSOCPercentage) + (alpha * (float)percentage);
+        
+        int batteryLevelIdx = smoothedSOCPercentage / 10 + 1;
+        
+        // Setup level colors
+        for( int i = 0; i < 2; i++) levels[i]->setColor(CHSV(0,255,150));     // Red
+        for( int i = 2; i < 3; i++) levels[i]->setColor(CHSV(60,255,150));    // Yellow
+        for( int i = 3; i < 11; i++) levels[i]->setColor(CHSV(97,255,150));   // Green
+            
+        // SOC
+        // Now turn off some of the levels (abstract to a draw later/next)
+        for (int i = 0; i < 11; i++) {
+          levels[i]->clear();
+        }
+        
+        for (int i = 0; i <= batteryLevelIdx; i++) {
+          levels[i]->render();
+        }
+    }
+    
+    /*
+        Sets the 12V strip illuminating the fan area
+        Visualizes the current pack temperature 
+    */
+    void setPackTemp(temp_t temp)
+    {
+
+    }
+
+    /*
+        Sets the 12V strip illuminating the battery pack main chamber
+        Visulizes current flowing out of the pack
+    */
+    void setPackCurrent(float amps)
+    {
+        //Todo. cooler colours for lower amperages, warmer colors for higher amperages
+        //Brightness?
+        //Min 0, max should be the resonable max current consumption of the motors with buffer room.
+        //Perhaps set to main pack fuse rating first
+        //analogWrite(PACK_R_PIN, 0);
+        //analogWrite(PACK_G_PIN, 0);
+        //analogWrite(PACK_B_PIN, 0);
     }
   
     void update()
     {
         sbxRight->setInsertionState(Inputs::isSbxRightPresent());
         sbxLeft->setInsertionState(Inputs::isSbxLeftPresent());
-        
+
         sbxRight->setContactorState(Inputs::isContactorRightClosed());
         sbxLeft->setContactorState(Inputs::isContactorLeftClosed());
-
+        
+        sbxRight->setPrechargeState(Inputs::isPrechargeRightOn());
+        sbxLeft->setPrechargeState(Inputs::isPrechargeLeftOn());
 
         if(CAN::isCurrent()){
             pack_t pack = CAN::getPackState();
+
             setSOC(pack.soc);
             
-            //CAN::temp_t temp = CANFoo::getTempState();
+            setPackTemp(CAN::getTempState());
         }else{
              /* 
                  No CAN data or outdated data. Can't display state of charge, temperature, etc
@@ -97,23 +134,13 @@ namespace Indicators {
     }
 
   void updateIndicators()
-  {   
-    // Just Set the brackets to the color of the battery level (for now?)
-    int batteryLevelIdx = smoothedSOCPercentage/10 + 1;
-
-    // SOC
-    // Now turn off some of the levels (abstract to a draw later/next)
-    for (int i = 0; i < 11; i++) {
-      levels[i]->clear();
-    } 
-    for (int i = 0; i <= batteryLevelIdx; i++) {
-      levels[i]->render();
-    }
+  {
 
     // Update color 
     socLeftBracket->renderColorFill(levels[batteryLevelIdx]->color);
-    socLeftArrow->renderColorFill(levels[batteryLevelIdx]->color);
     socRightBracket->renderColorFill(levels[batteryLevelIdx]->color);
+    
+    socLeftArrow->renderColorFill(levels[batteryLevelIdx]->color);
     socRightArrow->renderColorFill(levels[batteryLevelIdx]->color); 
        
     // SBX
@@ -124,42 +151,8 @@ namespace Indicators {
 
     // ARROWS
   }
-  
-  // --------------------------------------------------------------
-  // LED SECTION
 
-  LEDSection::LEDSection(uint16_t _offset, uint16_t _size){
-    size = _size;
-    offset = _offset;
-    color = CHSV(0,0,0);
-    map = new uint16_t[size];
-    for (int i = 0; i < size; i++)  map[i] = i;
-  }
-
-  void LEDSection::setColor(CHSV _color){
-    color = _color;    
-  }
-
-  void LEDSection::clear(){
-    for(int i = 0; i < size; i++) {
-      buf[offset + map[i]] = CHSV(0,0,0);   
-    }    
-  }
-
-  void LEDSection::render(){
-    for(int i = 0; i < size; i++) {
-      buf[offset + map[i]] = color;   
-    } 
-  }
-
-  void LEDSection::renderColorFill(CHSV _color){
-    color = _color;
-    for(int i = 0; i < size; i++) {
-      buf[offset + map[i]] = _color;   
-    } 
-  }
-
-  // LED MAPPING
+    // LED MAPPING
   void setupMapping() {
     uint8_t i;
 
@@ -206,14 +199,54 @@ namespace Indicators {
     levels[10] = new LEDSection(socOffset + 73, 5);
   }
 
-  //SBX Connector
 
-  SBXConnector::SBXConnector(LEDSection *sbxLower, LEDSection *sbxUpper) {
-    _sbxLower = sbxLower;
-    _sbxUpper = sbxUpper;
+  // --------------------------------------------------------------
+  // LED SECTION
+
+  LEDSection::LEDSection(uint16_t _offset, uint16_t _size){
+    size = _size;
+    offset = _offset;
+    color = CHSV(0,0,0);
+    map = new uint16_t[size];
+    for (int i = 0; i < size; i++)  map[i] = i;
   }
 
-  void SBXConnector::setInsertionState(bool state) {
+  void LEDSection::setColor(CHSV _color){
+    color = _color;    
+  }
+
+  void LEDSection::clear(){
+    for(int i = 0; i < size; i++) {
+      buf[offset + map[i]] = CHSV(0,0,0);   
+    }    
+  }
+
+  void LEDSection::render(){
+    for(int i = 0; i < size; i++) {
+      buf[offset + map[i]] = color;   
+    } 
+  }
+
+  void LEDSection::renderColorFill(CHSV _color){
+    color = _color;
+    for(int i = 0; i < size; i++) {
+      buf[offset + map[i]] = _color;   
+    } 
+  }
+  
+  //PowerChannel
+  PowerChannel::PowerChannel(LEDSection *sbxLower, LEDSection *sbxUpper, LEDSection *bracket, LEDSection *arrow) {
+    _sbxLower = sbxLower;
+    _sbxUpper = sbxUpper;
+    _bracket = bracket;
+    _arrow = arrow;
+  }
+
+  /*
+   * Illuminates the lower SBX ring when SBX connector plugged in.
+   * @Input bool
+   */
+  void PowerChannel::setInsertionState(bool state) {
     if(state){
       _sbxLower->setColor(CHSV(60,255,255));
     }else{
@@ -221,7 +254,12 @@ namespace Indicators {
     }
   }
 
-  void SBXConnector::setContactorState(bool state) {
+ /*
+  * Illuminates the upper SBX ring when the contactor's secondary contact is closed.
+  * This means the output is live.
+  * @Input bool
+  */ 
+  void PowerChannel::setContactorState(bool state) {
     if(state){
       _sbxUpper->setColor(CHSV(0,255,150));
     }else{
@@ -229,6 +267,23 @@ namespace Indicators {
     }
   }
 
+  /*
+  * Illuminates arrow. Means the precharge is on
+  * This means the output is live.
+  * @Input bool
+  */  
+  void PowerChannel::setPrechargeState(bool state){
+    
+  }
+
+   /*
+  * Illuminates the upper SBX ring when the contactor's secondary contact is closed.
+  * This means the output is live.
+  * @Input bool
+  */ 
+  void PowerChannel::setChargedState(bool state){
+    
+  }
 
 
   

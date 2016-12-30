@@ -6,6 +6,7 @@
 
 #include "Pins.h"
 #include "CAN.h"
+#include "Inputs.h"
 
 #define NUM_LEDS 188
 
@@ -21,6 +22,9 @@ namespace Indicators {
   
 	void setSOC(uint8_t percentage);
 	void setSBXState(uint8_t sbx, bool state);
+
+  void setPackCurrent(float amps);
+  void setPackTemp(temp_t temp);
   
   class LEDSection {
     public:
@@ -38,14 +42,20 @@ namespace Indicators {
       uint16_t size;
   };
 
-  class SBXConnector {
+  class PowerChannel {
     public:
-      SBXConnector(LEDSection *sbxLower, LEDSection *sbxUpper);
+      PowerChannel(LEDSection *sbxLower, LEDSection *sbxUpper, LEDSection *bracket, LEDSection *arrow);
+      
+      //Is the SBX (big red connector) plugged in? 
       void setInsertionState(bool state);
       void setContactorState(bool state);
+      void setPrechargeState(bool state);
+      void setChargedState(bool state);
     private:
       LEDSection *_sbxLower;
       LEDSection *_sbxUpper;
+      LEDSection *_arrow;
+      LEDSection *_bracket
   };
 }
 #endif // __Indicators_H__
