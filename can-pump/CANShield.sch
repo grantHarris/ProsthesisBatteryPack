@@ -170,12 +170,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 </symbol>
-<symbol name="5V">
-<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
-<text x="-1.016" y="3.556" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="5V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
 <symbol name="VCC">
 <wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
 <wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
@@ -188,19 +182,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="DGND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="5V" prefix="SUPPLY">
-<description>5V supply symbol</description>
-<gates>
-<gate name="G$1" symbol="5V" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -5499,6 +5480,45 @@ using ameteur radio standard layout</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="grant">
+<packages>
+<package name="MINIFUSE">
+<pad name="A1" x="0" y="0" drill="1.651" diameter="3.048"/>
+<pad name="A2" x="3.6576" y="0" drill="1.651" diameter="3.048"/>
+<pad name="B1" x="8.128" y="0" drill="1.651" diameter="3.048"/>
+<pad name="B2" x="11.7856" y="0" drill="1.651" diameter="3.048"/>
+</package>
+</packages>
+<symbols>
+<symbol name="FUSE">
+<pin name="A" x="0" y="0" length="middle" direction="pas"/>
+<pin name="B" x="20.32" y="0" length="middle" direction="pas" rot="R180"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="15.24" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
+<wire x1="15.24" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FUSE">
+<gates>
+<gate name="G$1" symbol="FUSE" x="-10.16" y="0"/>
+</gates>
+<devices>
+<device name="" package="MINIFUSE">
+<connects>
+<connect gate="G$1" pin="A" pad="A1 A2"/>
+<connect gate="G$1" pin="B" pad="B1 B2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -5549,8 +5569,6 @@ using ameteur radio standard layout</description>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="P+6" library="supply1" deviceset="VCC" device=""/>
 <part name="GND9" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="D3" library="SparkFun-LED" deviceset="LED" device="1206"/>
-<part name="R3" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="1K"/>
 <part name="K1" library="relay" deviceset="G5LE" device=""/>
 <part name="D4" library="adafruit" deviceset="DIODE" device="SOD-123"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
@@ -5558,48 +5576,34 @@ using ameteur radio standard layout</description>
 <part name="R4" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="100R"/>
 <part name="R5" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
-<part name="D6" library="SparkFun-LED" deviceset="LED" device="1206"/>
-<part name="R6" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="1K"/>
 <part name="K3" library="relay" deviceset="G5LE" device=""/>
 <part name="D7" library="adafruit" deviceset="DIODE" device="SOD-123"/>
-<part name="X5" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/2" device=""/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="Q3" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="AO3404A"/>
 <part name="R7" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="100R"/>
 <part name="R8" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
-<part name="D8" library="SparkFun-LED" deviceset="LED" device="1206"/>
-<part name="R9" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="1K"/>
 <part name="K4" library="relay" deviceset="G5LE" device=""/>
 <part name="D9" library="adafruit" deviceset="DIODE" device="SOD-123"/>
-<part name="X6" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/2" device=""/>
 <part name="GND22" library="supply1" deviceset="GND" device=""/>
 <part name="Q4" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="AO3404A"/>
 <part name="R11" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="100R"/>
 <part name="R14" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="GND23" library="supply1" deviceset="GND" device=""/>
-<part name="D10" library="SparkFun-LED" deviceset="LED" device="1206"/>
-<part name="R15" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="1K"/>
 <part name="K5" library="relay" deviceset="G5LE" device=""/>
 <part name="D11" library="adafruit" deviceset="DIODE" device="SOD-123"/>
-<part name="X7" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/2" device=""/>
 <part name="GND25" library="supply1" deviceset="GND" device=""/>
 <part name="Q5" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="AO3404A"/>
 <part name="R16" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="100R"/>
 <part name="R17" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="GND26" library="supply1" deviceset="GND" device=""/>
-<part name="D12" library="SparkFun-LED" deviceset="LED" device="1206"/>
-<part name="R18" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="1K"/>
 <part name="K6" library="relay" deviceset="G5LE" device=""/>
 <part name="D13" library="adafruit" deviceset="DIODE" device="SOD-123"/>
-<part name="X8" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/2" device=""/>
 <part name="GND28" library="supply1" deviceset="GND" device=""/>
 <part name="Q6" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="AO3404A"/>
 <part name="R19" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="100R"/>
 <part name="R20" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="GND32" library="supply1" deviceset="GND" device=""/>
-<part name="D14" library="SparkFun-LED" deviceset="LED" device="1206"/>
-<part name="R21" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="1K"/>
 <part name="K7" library="relay" deviceset="G5LE" device=""/>
 <part name="D15" library="adafruit" deviceset="DIODE" device="SOD-123"/>
 <part name="GND34" library="supply1" deviceset="GND" device=""/>
@@ -5607,8 +5611,6 @@ using ameteur radio standard layout</description>
 <part name="R23" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="100R"/>
 <part name="R24" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="GND35" library="supply1" deviceset="GND" device=""/>
-<part name="D16" library="SparkFun-LED" deviceset="LED" device="1206"/>
-<part name="R25" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="1K"/>
 <part name="K8" library="relay" deviceset="G5LE" device=""/>
 <part name="D17" library="adafruit" deviceset="DIODE" device="SOD-123"/>
 <part name="GND36" library="supply1" deviceset="GND" device=""/>
@@ -5617,8 +5619,6 @@ using ameteur radio standard layout</description>
 <part name="R26" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="100R"/>
 <part name="R27" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="GND38" library="supply1" deviceset="GND" device=""/>
-<part name="D18" library="SparkFun-LED" deviceset="LED" device="1206"/>
-<part name="R28" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="1K"/>
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>
 <part name="J2" library="SparkFun-Connectors" deviceset="M03" device="POLAR"/>
 <part name="GND39" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -5661,34 +5661,22 @@ using ameteur radio standard layout</description>
 <part name="D20" library="diode" deviceset="BAT54S" device=""/>
 <part name="D21" library="diode" deviceset="BAT54S" device=""/>
 <part name="GND44" library="supply1" deviceset="GND" device=""/>
-<part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="GND45" library="supply1" deviceset="GND" device=""/>
-<part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="D22" library="diode" deviceset="BAT54S" device=""/>
 <part name="D23" library="diode" deviceset="BAT54S" device=""/>
 <part name="GND46" library="supply1" deviceset="GND" device=""/>
 <part name="GND47" library="supply1" deviceset="GND" device=""/>
-<part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
-<part name="SUPPLY6" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="R41" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="100R"/>
 <part name="R42" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="100R"/>
 <part name="R43" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="100R"/>
 <part name="R44" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="100R"/>
-<part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY8" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
-<part name="SUPPLY9" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY10" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
-<part name="SUPPLY11" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY12" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
-<part name="SUPPLY13" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY14" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY15" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
-<part name="SUPPLY16" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
-<part name="SUPPLY17" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY18" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
-<part name="SUPPLY19" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY20" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
-<part name="SUPPLY21" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY22" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY23" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY24" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
@@ -5700,6 +5688,71 @@ using ameteur radio standard layout</description>
 <part name="J1" library="powerpoles" deviceset="POWERPOLE_POWER" device="25A_HORIZONTAL_G2"/>
 <part name="P+4" library="supply1" deviceset="+5V" device=""/>
 <part name="P+5" library="supply1" deviceset="+5V" device=""/>
+<part name="GND48" library="supply1" deviceset="GND" device=""/>
+<part name="GND49" library="supply1" deviceset="GND" device=""/>
+<part name="GND50" library="supply1" deviceset="GND" device=""/>
+<part name="GND51" library="supply1" deviceset="GND" device=""/>
+<part name="X1" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/3" device=""/>
+<part name="X3" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/3" device=""/>
+<part name="X4" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/3" device=""/>
+<part name="X9" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/3" device=""/>
+<part name="GND52" library="supply1" deviceset="GND" device=""/>
+<part name="GND53" library="supply1" deviceset="GND" device=""/>
+<part name="GND54" library="supply1" deviceset="GND" device=""/>
+<part name="GND55" library="supply1" deviceset="GND" device=""/>
+<part name="P+8" library="supply1" deviceset="+5V" device=""/>
+<part name="P+9" library="supply1" deviceset="+5V" device=""/>
+<part name="P+10" library="supply1" deviceset="+5V" device=""/>
+<part name="P+11" library="supply1" deviceset="+5V" device=""/>
+<part name="P+12" library="supply1" deviceset="+5V" device=""/>
+<part name="P+13" library="supply1" deviceset="+5V" device=""/>
+<part name="P+14" library="supply1" deviceset="+5V" device=""/>
+<part name="P+15" library="supply1" deviceset="+5V" device=""/>
+<part name="P+16" library="supply1" deviceset="+5V" device=""/>
+<part name="GND56" library="supply1" deviceset="GND" device=""/>
+<part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
+<part name="X5" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/2" device=""/>
+<part name="X6" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/2" device=""/>
+<part name="X7" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/2" device=""/>
+<part name="X8" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/2" device=""/>
+<part name="X10" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/2" device=""/>
+<part name="X11" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/2" device=""/>
+<part name="X12" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/2" device=""/>
+<part name="X13" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/2" device=""/>
+<part name="GND57" library="supply1" deviceset="GND" device=""/>
+<part name="GND58" library="supply1" deviceset="GND" device=""/>
+<part name="K9" library="relay" deviceset="G5LE" device=""/>
+<part name="D24" library="adafruit" deviceset="DIODE" device="SOD-123"/>
+<part name="GND59" library="supply1" deviceset="GND" device=""/>
+<part name="Q9" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="AO3404A"/>
+<part name="R45" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="100R"/>
+<part name="R46" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10K"/>
+<part name="GND60" library="supply1" deviceset="GND" device=""/>
+<part name="K10" library="relay" deviceset="G5LE" device=""/>
+<part name="D26" library="adafruit" deviceset="DIODE" device="SOD-123"/>
+<part name="GND61" library="supply1" deviceset="GND" device=""/>
+<part name="Q10" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="AO3404A"/>
+<part name="R48" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="100R"/>
+<part name="R49" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10K"/>
+<part name="GND62" library="supply1" deviceset="GND" device=""/>
+<part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
+<part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
+<part name="SUPPLY6" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
+<part name="GND63" library="supply1" deviceset="GND" device=""/>
+<part name="GND64" library="supply1" deviceset="GND" device=""/>
+<part name="SUPPLY30" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
+<part name="X14" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/2" device=""/>
+<part name="X15" library="con-phoenix-smkdsp" deviceset="SMKDSP_1,5/2" device=""/>
+<part name="U$2" library="grant" deviceset="FUSE" device=""/>
+<part name="U$4" library="grant" deviceset="FUSE" device=""/>
+<part name="U$5" library="grant" deviceset="FUSE" device=""/>
+<part name="U$6" library="grant" deviceset="FUSE" device=""/>
+<part name="U$7" library="grant" deviceset="FUSE" device=""/>
+<part name="U$8" library="grant" deviceset="FUSE" device=""/>
+<part name="U$9" library="grant" deviceset="FUSE" device=""/>
+<part name="U$10" library="grant" deviceset="FUSE" device=""/>
+<part name="U$11" library="grant" deviceset="FUSE" device=""/>
+<part name="U$12" library="grant" deviceset="FUSE" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6175,6 +6228,20 @@ using ameteur radio standard layout</description>
 <label x="-99.06" y="185.42" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
+<net name="RELAY10" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="22/A8"/>
+<wire x1="-66.04" y1="187.96" x2="-60.96" y2="187.96" width="0.1524" layer="91"/>
+<label x="-60.96" y="187.96" size="1.27" layer="95" rot="MR180" xref="yes"/>
+</segment>
+</net>
+<net name="RELAY9" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="23/A9"/>
+<wire x1="-66.04" y1="190.5" x2="-60.96" y2="190.5" width="0.1524" layer="91"/>
+<label x="-60.96" y="190.5" size="1.27" layer="95" rot="MR180" xref="yes"/>
+</segment>
+</net>
 </nets>
 </sheet>
 <sheet>
@@ -6189,8 +6256,6 @@ using ameteur radio standard layout</description>
 <instance part="R1" gate="G$1" x="-60.96" y="63.5"/>
 <instance part="R2" gate="G$1" x="-48.26" y="58.42" rot="R90"/>
 <instance part="GND8" gate="1" x="-48.26" y="50.8"/>
-<instance part="D3" gate="G$1" x="-45.72" y="78.74"/>
-<instance part="R3" gate="G$1" x="-45.72" y="86.36" rot="R90"/>
 <instance part="K1" gate="1" x="-25.4" y="17.78"/>
 <instance part="K1" gate="2" x="-7.62" y="17.78"/>
 <instance part="D4" gate="G$1" x="-33.02" y="17.78" rot="R90"/>
@@ -6199,56 +6264,38 @@ using ameteur radio standard layout</description>
 <instance part="R4" gate="G$1" x="-60.96" y="0"/>
 <instance part="R5" gate="G$1" x="-48.26" y="-5.08" rot="R90"/>
 <instance part="GND15" gate="1" x="-48.26" y="-12.7"/>
-<instance part="D6" gate="G$1" x="-45.72" y="15.24"/>
-<instance part="R6" gate="G$1" x="-45.72" y="22.86" rot="R90"/>
 <instance part="K3" gate="1" x="88.9" y="78.74"/>
 <instance part="K3" gate="2" x="106.68" y="78.74"/>
 <instance part="D7" gate="G$1" x="81.28" y="78.74" rot="R90"/>
-<instance part="X5" gate="-1" x="127" y="109.22" rot="MR270"/>
-<instance part="X5" gate="-2" x="121.92" y="76.2" rot="MR0"/>
 <instance part="GND18" gate="1" x="88.9" y="53.34"/>
 <instance part="Q3" gate="G$1" x="88.9" y="60.96"/>
 <instance part="R7" gate="G$1" x="53.34" y="60.96"/>
 <instance part="R8" gate="G$1" x="66.04" y="55.88" rot="R90"/>
 <instance part="GND19" gate="1" x="66.04" y="48.26"/>
-<instance part="D8" gate="G$1" x="68.58" y="76.2"/>
-<instance part="R9" gate="G$1" x="68.58" y="83.82" rot="R90"/>
 <instance part="K4" gate="1" x="88.9" y="15.24"/>
 <instance part="K4" gate="2" x="106.68" y="15.24"/>
 <instance part="D9" gate="G$1" x="78.74" y="15.24" rot="R90"/>
-<instance part="X6" gate="-1" x="101.6" y="33.02" rot="MR270"/>
-<instance part="X6" gate="-2" x="137.16" y="12.7" rot="MR0"/>
 <instance part="GND22" gate="1" x="88.9" y="-10.16"/>
 <instance part="Q4" gate="G$1" x="88.9" y="-2.54"/>
 <instance part="R11" gate="G$1" x="53.34" y="-2.54"/>
 <instance part="R14" gate="G$1" x="66.04" y="-7.62" rot="R90"/>
 <instance part="GND23" gate="1" x="66.04" y="-15.24"/>
-<instance part="D10" gate="G$1" x="68.58" y="12.7"/>
-<instance part="R15" gate="G$1" x="68.58" y="20.32" rot="R90"/>
 <instance part="K5" gate="1" x="198.12" y="78.74"/>
 <instance part="K5" gate="2" x="215.9" y="78.74"/>
 <instance part="D11" gate="G$1" x="190.5" y="78.74" rot="R90"/>
-<instance part="X7" gate="-1" x="228.6" y="111.76" rot="MR270"/>
-<instance part="X7" gate="-2" x="233.68" y="76.2" rot="MR0"/>
 <instance part="GND25" gate="1" x="198.12" y="53.34"/>
 <instance part="Q5" gate="G$1" x="198.12" y="60.96"/>
 <instance part="R16" gate="G$1" x="162.56" y="60.96"/>
 <instance part="R17" gate="G$1" x="175.26" y="55.88" rot="R90"/>
 <instance part="GND26" gate="1" x="175.26" y="48.26"/>
-<instance part="D12" gate="G$1" x="177.8" y="76.2"/>
-<instance part="R18" gate="G$1" x="177.8" y="83.82" rot="R90"/>
 <instance part="K6" gate="1" x="198.12" y="15.24"/>
 <instance part="K6" gate="2" x="215.9" y="15.24"/>
 <instance part="D13" gate="G$1" x="187.96" y="15.24" rot="R90"/>
-<instance part="X8" gate="-1" x="233.68" y="48.26" rot="MR270"/>
-<instance part="X8" gate="-2" x="236.22" y="12.7" rot="MR0"/>
 <instance part="GND28" gate="1" x="198.12" y="-10.16"/>
 <instance part="Q6" gate="G$1" x="198.12" y="-2.54"/>
 <instance part="R19" gate="G$1" x="162.56" y="-2.54"/>
 <instance part="R20" gate="G$1" x="175.26" y="-7.62" rot="R90"/>
 <instance part="GND32" gate="1" x="175.26" y="-15.24"/>
-<instance part="D14" gate="G$1" x="177.8" y="12.7"/>
-<instance part="R21" gate="G$1" x="177.8" y="20.32" rot="R90"/>
 <instance part="K7" gate="1" x="-137.16" y="83.82"/>
 <instance part="K7" gate="2" x="-119.38" y="83.82"/>
 <instance part="D15" gate="G$1" x="-144.78" y="83.82" rot="R90"/>
@@ -6257,8 +6304,6 @@ using ameteur radio standard layout</description>
 <instance part="R23" gate="G$1" x="-172.72" y="66.04"/>
 <instance part="R24" gate="G$1" x="-160.02" y="60.96" rot="R90"/>
 <instance part="GND35" gate="1" x="-160.02" y="53.34"/>
-<instance part="D16" gate="G$1" x="-157.48" y="81.28"/>
-<instance part="R25" gate="G$1" x="-157.48" y="88.9" rot="R90"/>
 <instance part="K8" gate="1" x="-137.16" y="20.32"/>
 <instance part="K8" gate="2" x="-119.38" y="20.32"/>
 <instance part="D17" gate="G$1" x="-144.78" y="20.32" rot="R90"/>
@@ -6268,23 +6313,13 @@ using ameteur radio standard layout</description>
 <instance part="R26" gate="G$1" x="-172.72" y="2.54"/>
 <instance part="R27" gate="G$1" x="-160.02" y="-2.54" rot="R90"/>
 <instance part="GND38" gate="1" x="-160.02" y="-10.16"/>
-<instance part="D18" gate="G$1" x="-157.48" y="17.78"/>
-<instance part="R28" gate="G$1" x="-157.48" y="25.4" rot="R90"/>
-<instance part="SUPPLY7" gate="G$1" x="-157.48" y="99.06"/>
 <instance part="SUPPLY8" gate="G$1" x="-137.16" y="99.06"/>
-<instance part="SUPPLY9" gate="G$1" x="-157.48" y="35.56"/>
 <instance part="SUPPLY10" gate="G$1" x="-144.78" y="25.4"/>
-<instance part="SUPPLY11" gate="G$1" x="-45.72" y="96.52"/>
 <instance part="SUPPLY12" gate="G$1" x="-25.4" y="96.52"/>
-<instance part="SUPPLY13" gate="G$1" x="-45.72" y="33.02"/>
 <instance part="SUPPLY14" gate="G$1" x="-25.4" y="30.48"/>
 <instance part="SUPPLY15" gate="G$1" x="88.9" y="27.94"/>
-<instance part="SUPPLY16" gate="G$1" x="68.58" y="30.48"/>
-<instance part="SUPPLY17" gate="G$1" x="68.58" y="93.98"/>
 <instance part="SUPPLY18" gate="G$1" x="88.9" y="88.9"/>
-<instance part="SUPPLY19" gate="G$1" x="177.8" y="88.9"/>
 <instance part="SUPPLY20" gate="G$1" x="198.12" y="91.44"/>
-<instance part="SUPPLY21" gate="G$1" x="177.8" y="30.48"/>
 <instance part="SUPPLY22" gate="G$1" x="-119.38" y="78.74" rot="R180"/>
 <instance part="SUPPLY23" gate="G$1" x="-119.38" y="17.78" rot="R180"/>
 <instance part="SUPPLY24" gate="G$1" x="-7.62" y="78.74" rot="R180"/>
@@ -6293,6 +6328,66 @@ using ameteur radio standard layout</description>
 <instance part="SUPPLY27" gate="G$1" x="106.68" y="12.7" rot="R180"/>
 <instance part="SUPPLY28" gate="G$1" x="215.9" y="12.7" rot="R180"/>
 <instance part="SUPPLY29" gate="G$1" x="215.9" y="76.2" rot="R180"/>
+<instance part="GND48" gate="1" x="228.6" y="73.66"/>
+<instance part="GND49" gate="1" x="231.14" y="10.16"/>
+<instance part="GND50" gate="1" x="132.08" y="10.16"/>
+<instance part="GND51" gate="1" x="116.84" y="73.66"/>
+<instance part="GND56" gate="1" x="15.24" y="40.64"/>
+<instance part="SUPPLY1" gate="G$1" x="198.12" y="30.48"/>
+<instance part="X5" gate="-1" x="205.74" y="104.14"/>
+<instance part="X5" gate="-2" x="223.52" y="76.2"/>
+<instance part="X6" gate="-1" x="205.74" y="40.64"/>
+<instance part="X6" gate="-2" x="226.06" y="12.7"/>
+<instance part="X7" gate="-1" x="96.52" y="104.14"/>
+<instance part="X7" gate="-2" x="111.76" y="76.2"/>
+<instance part="X8" gate="-1" x="96.52" y="40.64"/>
+<instance part="X8" gate="-2" x="127" y="12.7"/>
+<instance part="X10" gate="-1" x="-17.78" y="43.18"/>
+<instance part="X10" gate="-2" x="10.16" y="43.18"/>
+<instance part="X11" gate="-1" x="-17.78" y="106.68"/>
+<instance part="X11" gate="-2" x="5.08" y="73.66"/>
+<instance part="X12" gate="-1" x="-132.08" y="109.22"/>
+<instance part="X12" gate="-2" x="-104.14" y="81.28"/>
+<instance part="X13" gate="-1" x="-129.54" y="45.72"/>
+<instance part="X13" gate="-2" x="-129.54" y="0"/>
+<instance part="GND57" gate="1" x="-99.06" y="78.74"/>
+<instance part="GND58" gate="1" x="10.16" y="71.12"/>
+<instance part="K9" gate="1" x="307.34" y="78.74"/>
+<instance part="K9" gate="2" x="325.12" y="78.74"/>
+<instance part="D24" gate="G$1" x="299.72" y="78.74" rot="R90"/>
+<instance part="GND59" gate="1" x="307.34" y="53.34"/>
+<instance part="Q9" gate="G$1" x="307.34" y="60.96"/>
+<instance part="R45" gate="G$1" x="271.78" y="60.96"/>
+<instance part="R46" gate="G$1" x="284.48" y="55.88" rot="R90"/>
+<instance part="GND60" gate="1" x="284.48" y="48.26"/>
+<instance part="K10" gate="1" x="307.34" y="15.24"/>
+<instance part="K10" gate="2" x="325.12" y="15.24"/>
+<instance part="D26" gate="G$1" x="297.18" y="15.24" rot="R90"/>
+<instance part="GND61" gate="1" x="307.34" y="-10.16"/>
+<instance part="Q10" gate="G$1" x="307.34" y="-2.54"/>
+<instance part="R48" gate="G$1" x="271.78" y="-2.54"/>
+<instance part="R49" gate="G$1" x="284.48" y="-7.62" rot="R90"/>
+<instance part="GND62" gate="1" x="284.48" y="-15.24"/>
+<instance part="SUPPLY3" gate="G$1" x="307.34" y="91.44"/>
+<instance part="SUPPLY5" gate="G$1" x="325.12" y="12.7" rot="R180"/>
+<instance part="SUPPLY6" gate="G$1" x="325.12" y="76.2" rot="R180"/>
+<instance part="GND63" gate="1" x="337.82" y="73.66"/>
+<instance part="GND64" gate="1" x="340.36" y="10.16"/>
+<instance part="SUPPLY30" gate="G$1" x="307.34" y="30.48"/>
+<instance part="X14" gate="-1" x="314.96" y="104.14"/>
+<instance part="X14" gate="-2" x="332.74" y="76.2"/>
+<instance part="X15" gate="-1" x="314.96" y="40.64"/>
+<instance part="X15" gate="-2" x="335.28" y="12.7"/>
+<instance part="U$2" gate="G$1" x="-127" y="88.9" rot="R90"/>
+<instance part="U$4" gate="G$1" x="-12.7" y="86.36" rot="R90"/>
+<instance part="U$5" gate="G$1" x="-124.46" y="25.4" rot="R90"/>
+<instance part="U$6" gate="G$1" x="-12.7" y="22.86" rot="R90"/>
+<instance part="U$7" gate="G$1" x="101.6" y="83.82" rot="R90"/>
+<instance part="U$8" gate="G$1" x="101.6" y="20.32" rot="R90"/>
+<instance part="U$9" gate="G$1" x="210.82" y="20.32" rot="R90"/>
+<instance part="U$10" gate="G$1" x="210.82" y="83.82" rot="R90"/>
+<instance part="U$11" gate="G$1" x="320.04" y="83.82" rot="R90"/>
+<instance part="U$12" gate="G$1" x="320.04" y="20.32" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -6303,14 +6398,9 @@ using ameteur radio standard layout</description>
 <pinref part="D2" gate="G$1" pin="A"/>
 <wire x1="-25.4" y1="76.2" x2="-33.02" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="76.2" x2="-33.02" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="76.2" x2="-25.4" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="76.2" x2="-25.4" y2="68.58" width="0.1524" layer="91"/>
 <junction x="-25.4" y="76.2"/>
 <pinref part="Q2" gate="G$1" pin="D"/>
-<pinref part="D3" gate="G$1" pin="C"/>
-<wire x1="-25.4" y1="71.12" x2="-25.4" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="71.12" x2="-45.72" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="-45.72" y1="71.12" x2="-45.72" y2="73.66" width="0.1524" layer="91"/>
-<junction x="-25.4" y="71.12"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -6378,6 +6468,62 @@ using ameteur radio standard layout</description>
 <pinref part="R27" gate="G$1" pin="1"/>
 <pinref part="GND38" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="GND48" gate="1" pin="GND"/>
+<pinref part="X5" gate="-2" pin="KL"/>
+</segment>
+<segment>
+<pinref part="GND49" gate="1" pin="GND"/>
+<pinref part="X6" gate="-2" pin="KL"/>
+</segment>
+<segment>
+<pinref part="GND51" gate="1" pin="GND"/>
+<pinref part="X7" gate="-2" pin="KL"/>
+</segment>
+<segment>
+<pinref part="GND50" gate="1" pin="GND"/>
+<pinref part="X8" gate="-2" pin="KL"/>
+</segment>
+<segment>
+<pinref part="GND56" gate="1" pin="GND"/>
+<pinref part="X10" gate="-2" pin="KL"/>
+</segment>
+<segment>
+<pinref part="GND36" gate="1" pin="GND"/>
+<pinref part="X13" gate="-2" pin="KL"/>
+</segment>
+<segment>
+<pinref part="X12" gate="-2" pin="KL"/>
+<pinref part="GND57" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="X11" gate="-2" pin="KL"/>
+<pinref part="GND58" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="GND59" gate="1" pin="GND"/>
+<pinref part="Q9" gate="G$1" pin="S"/>
+</segment>
+<segment>
+<pinref part="R46" gate="G$1" pin="1"/>
+<pinref part="GND60" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="GND61" gate="1" pin="GND"/>
+<pinref part="Q10" gate="G$1" pin="S"/>
+</segment>
+<segment>
+<pinref part="R49" gate="G$1" pin="1"/>
+<pinref part="GND62" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="GND63" gate="1" pin="GND"/>
+<pinref part="X14" gate="-2" pin="KL"/>
+</segment>
+<segment>
+<pinref part="GND64" gate="1" pin="GND"/>
+<pinref part="X15" gate="-2" pin="KL"/>
+</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
@@ -6396,26 +6542,15 @@ using ameteur radio standard layout</description>
 <label x="144.78" y="60.96" size="1.27" layer="95" rot="MR0" xref="yes"/>
 </segment>
 </net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="D3" gate="G$1" pin="A"/>
-<pinref part="R3" gate="G$1" pin="1"/>
-</segment>
-</net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="K1" gate="1" pin="2"/>
 <pinref part="D4" gate="G$1" pin="A"/>
 <wire x1="-25.4" y1="12.7" x2="-33.02" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="12.7" x2="-33.02" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="12.7" x2="-25.4" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="12.7" x2="-25.4" y2="5.08" width="0.1524" layer="91"/>
 <junction x="-25.4" y="12.7"/>
 <pinref part="Q1" gate="G$1" pin="D"/>
-<pinref part="D6" gate="G$1" pin="C"/>
-<wire x1="-25.4" y1="7.62" x2="-25.4" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="7.62" x2="-45.72" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="-45.72" y1="7.62" x2="-45.72" y2="10.16" width="0.1524" layer="91"/>
-<junction x="-25.4" y="7.62"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -6428,26 +6563,15 @@ using ameteur radio standard layout</description>
 <junction x="-48.26" y="0"/>
 </segment>
 </net>
-<net name="N$11" class="0">
-<segment>
-<pinref part="D6" gate="G$1" pin="A"/>
-<pinref part="R6" gate="G$1" pin="1"/>
-</segment>
-</net>
 <net name="N$12" class="0">
 <segment>
 <pinref part="K3" gate="1" pin="2"/>
 <pinref part="D7" gate="G$1" pin="A"/>
 <wire x1="88.9" y1="73.66" x2="81.28" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="73.66" x2="81.28" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="73.66" x2="88.9" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="73.66" x2="88.9" y2="66.04" width="0.1524" layer="91"/>
 <junction x="88.9" y="73.66"/>
 <pinref part="Q3" gate="G$1" pin="D"/>
-<pinref part="D8" gate="G$1" pin="C"/>
-<wire x1="88.9" y1="68.58" x2="88.9" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="68.58" x2="68.58" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="68.58" x2="68.58" y2="71.12" width="0.1524" layer="91"/>
-<junction x="88.9" y="68.58"/>
 </segment>
 </net>
 <net name="N$13" class="0">
@@ -6460,26 +6584,15 @@ using ameteur radio standard layout</description>
 <junction x="66.04" y="60.96"/>
 </segment>
 </net>
-<net name="N$17" class="0">
-<segment>
-<pinref part="D8" gate="G$1" pin="A"/>
-<pinref part="R9" gate="G$1" pin="1"/>
-</segment>
-</net>
 <net name="N$18" class="0">
 <segment>
 <pinref part="K4" gate="1" pin="2"/>
 <pinref part="D9" gate="G$1" pin="A"/>
 <wire x1="88.9" y1="10.16" x2="78.74" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="10.16" x2="78.74" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="10.16" x2="88.9" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="10.16" x2="88.9" y2="2.54" width="0.1524" layer="91"/>
 <junction x="88.9" y="10.16"/>
 <pinref part="Q4" gate="G$1" pin="D"/>
-<pinref part="D10" gate="G$1" pin="C"/>
-<wire x1="88.9" y1="5.08" x2="88.9" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="5.08" x2="68.58" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="5.08" x2="68.58" y2="7.62" width="0.1524" layer="91"/>
-<junction x="88.9" y="5.08"/>
 </segment>
 </net>
 <net name="N$19" class="0">
@@ -6492,12 +6605,6 @@ using ameteur radio standard layout</description>
 <junction x="66.04" y="-2.54"/>
 </segment>
 </net>
-<net name="N$21" class="0">
-<segment>
-<pinref part="D10" gate="G$1" pin="A"/>
-<pinref part="R15" gate="G$1" pin="1"/>
-</segment>
-</net>
 <net name="N$22" class="0">
 <segment>
 <pinref part="K5" gate="1" pin="2"/>
@@ -6505,14 +6612,9 @@ using ameteur radio standard layout</description>
 <pinref part="D11" gate="G$1" pin="A"/>
 <wire x1="198.12" y1="71.12" x2="190.5" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="71.12" x2="190.5" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="198.12" y1="71.12" x2="198.12" y2="68.58" width="0.1524" layer="91"/>
 <junction x="198.12" y="71.12"/>
 <pinref part="Q5" gate="G$1" pin="D"/>
-<pinref part="D12" gate="G$1" pin="C"/>
-<wire x1="198.12" y1="68.58" x2="198.12" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="198.12" y1="68.58" x2="177.8" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="68.58" x2="177.8" y2="71.12" width="0.1524" layer="91"/>
-<junction x="198.12" y="68.58"/>
+<wire x1="198.12" y1="71.12" x2="198.12" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$23" class="0">
@@ -6525,12 +6627,6 @@ using ameteur radio standard layout</description>
 <junction x="175.26" y="60.96"/>
 </segment>
 </net>
-<net name="N$25" class="0">
-<segment>
-<pinref part="D12" gate="G$1" pin="A"/>
-<pinref part="R18" gate="G$1" pin="1"/>
-</segment>
-</net>
 <net name="N$26" class="0">
 <segment>
 <pinref part="K6" gate="1" pin="2"/>
@@ -6538,14 +6634,9 @@ using ameteur radio standard layout</description>
 <pinref part="D13" gate="G$1" pin="A"/>
 <wire x1="198.12" y1="7.62" x2="187.96" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="7.62" x2="187.96" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="198.12" y1="7.62" x2="198.12" y2="5.08" width="0.1524" layer="91"/>
 <junction x="198.12" y="7.62"/>
 <pinref part="Q6" gate="G$1" pin="D"/>
-<pinref part="D14" gate="G$1" pin="C"/>
-<wire x1="198.12" y1="5.08" x2="198.12" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="198.12" y1="5.08" x2="177.8" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="5.08" x2="177.8" y2="7.62" width="0.1524" layer="91"/>
-<junction x="198.12" y="5.08"/>
+<wire x1="198.12" y1="7.62" x2="198.12" y2="2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$27" class="0">
@@ -6558,26 +6649,15 @@ using ameteur radio standard layout</description>
 <junction x="175.26" y="-2.54"/>
 </segment>
 </net>
-<net name="N$29" class="0">
-<segment>
-<pinref part="D14" gate="G$1" pin="A"/>
-<pinref part="R21" gate="G$1" pin="1"/>
-</segment>
-</net>
 <net name="N$30" class="0">
 <segment>
 <pinref part="K7" gate="1" pin="2"/>
 <pinref part="D15" gate="G$1" pin="A"/>
 <wire x1="-137.16" y1="78.74" x2="-144.78" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="-144.78" y1="78.74" x2="-144.78" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="-137.16" y1="78.74" x2="-137.16" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="-137.16" y1="78.74" x2="-137.16" y2="71.12" width="0.1524" layer="91"/>
 <junction x="-137.16" y="78.74"/>
 <pinref part="Q7" gate="G$1" pin="D"/>
-<pinref part="D16" gate="G$1" pin="C"/>
-<wire x1="-137.16" y1="73.66" x2="-137.16" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="-137.16" y1="73.66" x2="-157.48" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="-157.48" y1="73.66" x2="-157.48" y2="76.2" width="0.1524" layer="91"/>
-<junction x="-137.16" y="73.66"/>
 </segment>
 </net>
 <net name="N$31" class="0">
@@ -6590,26 +6670,15 @@ using ameteur radio standard layout</description>
 <junction x="-160.02" y="66.04"/>
 </segment>
 </net>
-<net name="N$33" class="0">
-<segment>
-<pinref part="D16" gate="G$1" pin="A"/>
-<pinref part="R25" gate="G$1" pin="1"/>
-</segment>
-</net>
 <net name="N$34" class="0">
 <segment>
 <pinref part="K8" gate="1" pin="2"/>
 <pinref part="D17" gate="G$1" pin="A"/>
 <wire x1="-137.16" y1="15.24" x2="-144.78" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="-144.78" y1="15.24" x2="-144.78" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="-137.16" y1="15.24" x2="-137.16" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-137.16" y1="15.24" x2="-137.16" y2="7.62" width="0.1524" layer="91"/>
 <junction x="-137.16" y="15.24"/>
 <pinref part="Q8" gate="G$1" pin="D"/>
-<pinref part="D18" gate="G$1" pin="C"/>
-<wire x1="-137.16" y1="10.16" x2="-137.16" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="-137.16" y1="10.16" x2="-157.48" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="-157.48" y1="10.16" x2="-157.48" y2="12.7" width="0.1524" layer="91"/>
-<junction x="-137.16" y="10.16"/>
 </segment>
 </net>
 <net name="N$35" class="0">
@@ -6620,12 +6689,6 @@ using ameteur radio standard layout</description>
 <pinref part="R27" gate="G$1" pin="2"/>
 <wire x1="-160.02" y1="2.54" x2="-144.78" y2="2.54" width="0.1524" layer="91"/>
 <junction x="-160.02" y="2.54"/>
-</segment>
-</net>
-<net name="N$37" class="0">
-<segment>
-<pinref part="D18" gate="G$1" pin="A"/>
-<pinref part="R28" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="RELAY1" class="0">
@@ -6677,24 +6740,7 @@ using ameteur radio standard layout</description>
 <label x="144.78" y="-2.54" size="1.27" layer="95" rot="MR0" xref="yes"/>
 </segment>
 </net>
-<net name="N$64" class="0">
-<segment>
-<pinref part="K6" gate="1" pin="1"/>
-<pinref part="D13" gate="G$1" pin="C"/>
-<wire x1="198.12" y1="22.86" x2="198.12" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="17.78" x2="187.96" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="22.86" x2="198.12" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="198.12" y1="30.48" x2="198.12" y2="22.86" width="0.1524" layer="91"/>
-<junction x="198.12" y="22.86"/>
-</segment>
-</net>
 <net name="VCC" class="0">
-<segment>
-<pinref part="R25" gate="G$1" pin="2"/>
-<wire x1="-157.48" y1="99.06" x2="-157.48" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="SUPPLY7" gate="G$1" pin="VCC"/>
-<wire x1="-157.48" y1="99.06" x2="-157.48" y2="93.98" width="0.1524" layer="91"/>
-</segment>
 <segment>
 <pinref part="K7" gate="1" pin="1"/>
 <pinref part="D15" gate="G$1" pin="C"/>
@@ -6705,22 +6751,12 @@ using ameteur radio standard layout</description>
 <pinref part="SUPPLY8" gate="G$1" pin="VCC"/>
 </segment>
 <segment>
-<pinref part="R28" gate="G$1" pin="2"/>
-<wire x1="-157.48" y1="35.56" x2="-157.48" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="SUPPLY9" gate="G$1" pin="VCC"/>
-</segment>
-<segment>
 <pinref part="K8" gate="1" pin="1"/>
 <pinref part="D17" gate="G$1" pin="C"/>
 <wire x1="-144.78" y1="22.86" x2="-144.78" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="-144.78" y1="25.4" x2="-137.16" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="SUPPLY10" gate="G$1" pin="VCC"/>
 <junction x="-144.78" y="25.4"/>
-</segment>
-<segment>
-<pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="-45.72" y1="96.52" x2="-45.72" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="SUPPLY11" gate="G$1" pin="VCC"/>
 </segment>
 <segment>
 <pinref part="K2" gate="1" pin="1"/>
@@ -6730,11 +6766,6 @@ using ameteur radio standard layout</description>
 <wire x1="-33.02" y1="86.36" x2="-25.4" y2="86.36" width="0.1524" layer="91"/>
 <junction x="-25.4" y="86.36"/>
 <pinref part="SUPPLY12" gate="G$1" pin="VCC"/>
-</segment>
-<segment>
-<pinref part="R6" gate="G$1" pin="2"/>
-<wire x1="-45.72" y1="33.02" x2="-45.72" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="SUPPLY13" gate="G$1" pin="VCC"/>
 </segment>
 <segment>
 <pinref part="K1" gate="1" pin="1"/>
@@ -6755,16 +6786,6 @@ using ameteur radio standard layout</description>
 <pinref part="SUPPLY15" gate="G$1" pin="VCC"/>
 </segment>
 <segment>
-<pinref part="R15" gate="G$1" pin="2"/>
-<wire x1="68.58" y1="30.48" x2="68.58" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="SUPPLY16" gate="G$1" pin="VCC"/>
-</segment>
-<segment>
-<pinref part="R9" gate="G$1" pin="2"/>
-<wire x1="68.58" y1="93.98" x2="68.58" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="SUPPLY17" gate="G$1" pin="VCC"/>
-</segment>
-<segment>
 <pinref part="K3" gate="1" pin="1"/>
 <pinref part="D7" gate="G$1" pin="C"/>
 <wire x1="81.28" y1="81.28" x2="81.28" y2="83.82" width="0.1524" layer="91"/>
@@ -6772,10 +6793,6 @@ using ameteur radio standard layout</description>
 <wire x1="88.9" y1="83.82" x2="88.9" y2="88.9" width="0.1524" layer="91"/>
 <junction x="88.9" y="83.82"/>
 <pinref part="SUPPLY18" gate="G$1" pin="VCC"/>
-</segment>
-<segment>
-<pinref part="R18" gate="G$1" pin="2"/>
-<pinref part="SUPPLY19" gate="G$1" pin="VCC"/>
 </segment>
 <segment>
 <pinref part="K5" gate="1" pin="1"/>
@@ -6786,11 +6803,6 @@ using ameteur radio standard layout</description>
 <wire x1="198.12" y1="91.44" x2="198.12" y2="86.36" width="0.1524" layer="91"/>
 <junction x="198.12" y="86.36"/>
 <pinref part="SUPPLY20" gate="G$1" pin="VCC"/>
-</segment>
-<segment>
-<pinref part="R21" gate="G$1" pin="2"/>
-<wire x1="177.8" y1="30.48" x2="177.8" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="SUPPLY21" gate="G$1" pin="VCC"/>
 </segment>
 <segment>
 <pinref part="K7" gate="2" pin="P"/>
@@ -6826,6 +6838,223 @@ using ameteur radio standard layout</description>
 <pinref part="K5" gate="2" pin="P"/>
 <pinref part="SUPPLY29" gate="G$1" pin="VCC"/>
 </segment>
+<segment>
+<pinref part="K6" gate="1" pin="1"/>
+<pinref part="D13" gate="G$1" pin="C"/>
+<wire x1="198.12" y1="22.86" x2="198.12" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="17.78" x2="187.96" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="22.86" x2="198.12" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="30.48" x2="198.12" y2="22.86" width="0.1524" layer="91"/>
+<junction x="198.12" y="22.86"/>
+<pinref part="SUPPLY1" gate="G$1" pin="VCC"/>
+</segment>
+<segment>
+<pinref part="K9" gate="1" pin="1"/>
+<pinref part="D24" gate="G$1" pin="C"/>
+<wire x1="307.34" y1="86.36" x2="307.34" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="299.72" y1="81.28" x2="299.72" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="299.72" y1="86.36" x2="307.34" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="307.34" y1="91.44" x2="307.34" y2="86.36" width="0.1524" layer="91"/>
+<junction x="307.34" y="86.36"/>
+<pinref part="SUPPLY3" gate="G$1" pin="VCC"/>
+</segment>
+<segment>
+<pinref part="K10" gate="2" pin="P"/>
+<pinref part="SUPPLY5" gate="G$1" pin="VCC"/>
+</segment>
+<segment>
+<pinref part="K9" gate="2" pin="P"/>
+<pinref part="SUPPLY6" gate="G$1" pin="VCC"/>
+</segment>
+<segment>
+<pinref part="K10" gate="1" pin="1"/>
+<pinref part="D26" gate="G$1" pin="C"/>
+<wire x1="307.34" y1="22.86" x2="307.34" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="297.18" y1="17.78" x2="297.18" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="297.18" y1="22.86" x2="307.34" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="307.34" y1="30.48" x2="307.34" y2="22.86" width="0.1524" layer="91"/>
+<junction x="307.34" y="22.86"/>
+<pinref part="SUPPLY30" gate="G$1" pin="VCC"/>
+</segment>
+</net>
+<net name="N$55" class="0">
+<segment>
+<pinref part="K9" gate="1" pin="2"/>
+<wire x1="307.34" y1="73.66" x2="307.34" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="D24" gate="G$1" pin="A"/>
+<wire x1="307.34" y1="71.12" x2="299.72" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="299.72" y1="71.12" x2="299.72" y2="76.2" width="0.1524" layer="91"/>
+<junction x="307.34" y="71.12"/>
+<pinref part="Q9" gate="G$1" pin="D"/>
+<wire x1="307.34" y1="71.12" x2="307.34" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$57" class="0">
+<segment>
+<pinref part="Q9" gate="G$1" pin="G"/>
+<pinref part="R45" gate="G$1" pin="2"/>
+<wire x1="276.86" y1="60.96" x2="284.48" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="R46" gate="G$1" pin="2"/>
+<wire x1="284.48" y1="60.96" x2="299.72" y2="60.96" width="0.1524" layer="91"/>
+<junction x="284.48" y="60.96"/>
+</segment>
+</net>
+<net name="N$59" class="0">
+<segment>
+<pinref part="K10" gate="1" pin="2"/>
+<wire x1="307.34" y1="10.16" x2="307.34" y2="7.62" width="0.1524" layer="91"/>
+<pinref part="D26" gate="G$1" pin="A"/>
+<wire x1="307.34" y1="7.62" x2="297.18" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="297.18" y1="7.62" x2="297.18" y2="12.7" width="0.1524" layer="91"/>
+<junction x="307.34" y="7.62"/>
+<pinref part="Q10" gate="G$1" pin="D"/>
+<wire x1="307.34" y1="7.62" x2="307.34" y2="2.54" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$60" class="0">
+<segment>
+<pinref part="Q10" gate="G$1" pin="G"/>
+<pinref part="R48" gate="G$1" pin="2"/>
+<wire x1="276.86" y1="-2.54" x2="284.48" y2="-2.54" width="0.1524" layer="91"/>
+<pinref part="R49" gate="G$1" pin="2"/>
+<wire x1="284.48" y1="-2.54" x2="299.72" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="284.48" y="-2.54"/>
+</segment>
+</net>
+<net name="RELAY9" class="0">
+<segment>
+<pinref part="R45" gate="G$1" pin="1"/>
+<wire x1="266.7" y1="60.96" x2="254" y2="60.96" width="0.1524" layer="91"/>
+<label x="254" y="60.96" size="1.27" layer="95" rot="MR0" xref="yes"/>
+</segment>
+</net>
+<net name="RELAY10" class="0">
+<segment>
+<pinref part="R48" gate="G$1" pin="1"/>
+<wire x1="266.7" y1="-2.54" x2="254" y2="-2.54" width="0.1524" layer="91"/>
+<label x="254" y="-2.54" size="1.27" layer="95" rot="MR0" xref="yes"/>
+</segment>
+</net>
+<net name="N$50" class="0">
+<segment>
+<pinref part="K7" gate="2" pin="S"/>
+<pinref part="U$2" gate="G$1" pin="A"/>
+<wire x1="-127" y1="88.9" x2="-124.46" y2="88.9" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$64" class="0">
+<segment>
+<pinref part="X12" gate="-1" pin="KL"/>
+<pinref part="U$2" gate="G$1" pin="B"/>
+</segment>
+</net>
+<net name="N$41" class="0">
+<segment>
+<pinref part="K2" gate="2" pin="S"/>
+<pinref part="U$4" gate="G$1" pin="A"/>
+</segment>
+</net>
+<net name="N$45" class="0">
+<segment>
+<pinref part="K8" gate="2" pin="S"/>
+<pinref part="U$5" gate="G$1" pin="A"/>
+</segment>
+</net>
+<net name="N$53" class="0">
+<segment>
+<pinref part="K1" gate="2" pin="S"/>
+<pinref part="U$6" gate="G$1" pin="A"/>
+</segment>
+</net>
+<net name="N$65" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="B"/>
+<pinref part="X13" gate="-1" pin="KL"/>
+</segment>
+</net>
+<net name="N$66" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="B"/>
+<pinref part="X11" gate="-1" pin="KL"/>
+</segment>
+</net>
+<net name="N$67" class="0">
+<segment>
+<pinref part="U$6" gate="G$1" pin="B"/>
+<pinref part="X10" gate="-1" pin="KL"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="K3" gate="2" pin="S"/>
+<pinref part="U$7" gate="G$1" pin="A"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="K4" gate="2" pin="S"/>
+<pinref part="U$8" gate="G$1" pin="A"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="X8" gate="-1" pin="KL"/>
+<pinref part="U$8" gate="G$1" pin="B"/>
+</segment>
+</net>
+<net name="N$15" class="0">
+<segment>
+<pinref part="K6" gate="2" pin="S"/>
+<pinref part="U$9" gate="G$1" pin="A"/>
+</segment>
+</net>
+<net name="N$68" class="0">
+<segment>
+<pinref part="X6" gate="-1" pin="KL"/>
+<pinref part="U$9" gate="G$1" pin="B"/>
+</segment>
+</net>
+<net name="N$69" class="0">
+<segment>
+<pinref part="K5" gate="2" pin="S"/>
+<pinref part="U$10" gate="G$1" pin="A"/>
+</segment>
+</net>
+<net name="N$70" class="0">
+<segment>
+<pinref part="U$7" gate="G$1" pin="B"/>
+<pinref part="X7" gate="-1" pin="KL"/>
+</segment>
+</net>
+<net name="N$71" class="0">
+<segment>
+<pinref part="U$10" gate="G$1" pin="B"/>
+<pinref part="X5" gate="-1" pin="KL"/>
+</segment>
+</net>
+<net name="N$62" class="0">
+<segment>
+<pinref part="K9" gate="2" pin="S"/>
+<pinref part="U$11" gate="G$1" pin="A"/>
+</segment>
+</net>
+<net name="N$63" class="0">
+<segment>
+<pinref part="K10" gate="2" pin="S"/>
+<pinref part="U$12" gate="G$1" pin="A"/>
+</segment>
+</net>
+<net name="N$72" class="0">
+<segment>
+<pinref part="U$12" gate="G$1" pin="B"/>
+<pinref part="X15" gate="-1" pin="KL"/>
+</segment>
+</net>
+<net name="N$73" class="0">
+<segment>
+<pinref part="U$11" gate="G$1" pin="B"/>
+<pinref part="X14" gate="-1" pin="KL"/>
+</segment>
 </net>
 </nets>
 </sheet>
@@ -6858,47 +7087,49 @@ using ameteur radio standard layout</description>
 <instance part="R38" gate="R?" x="218.44" y="15.24" rot="R180"/>
 <instance part="R39" gate="G$1" x="203.2" y="-20.32"/>
 <instance part="R40" gate="R?" x="218.44" y="-20.32" rot="R180"/>
-<instance part="D20" gate="G$1" x="27.94" y="27.94"/>
+<instance part="D20" gate="G$1" x="165.1" y="-7.62"/>
 <instance part="D21" gate="G$1" x="27.94" y="-7.62"/>
-<instance part="GND44" gate="1" x="20.32" y="25.4"/>
-<instance part="SUPPLY3" gate="G$1" x="38.1" y="27.94" rot="R180"/>
+<instance part="GND44" gate="1" x="157.48" y="-10.16"/>
 <instance part="GND45" gate="1" x="22.86" y="-10.16"/>
-<instance part="SUPPLY4" gate="G$1" x="33.02" y="-7.62" rot="R180"/>
 <instance part="D22" gate="G$1" x="165.1" y="27.94"/>
-<instance part="D23" gate="G$1" x="165.1" y="-7.62"/>
+<instance part="D23" gate="G$1" x="27.94" y="25.4"/>
 <instance part="GND46" gate="1" x="160.02" y="25.4"/>
-<instance part="GND47" gate="1" x="160.02" y="-10.16"/>
-<instance part="SUPPLY5" gate="G$1" x="170.18" y="-7.62" rot="R180"/>
-<instance part="SUPPLY6" gate="G$1" x="170.18" y="27.94" rot="R180"/>
-<instance part="R41" gate="G$1" x="12.7" y="30.48"/>
+<instance part="GND47" gate="1" x="22.86" y="22.86"/>
+<instance part="R41" gate="G$1" x="149.86" y="-5.08"/>
 <instance part="R42" gate="G$1" x="12.7" y="-5.08"/>
 <instance part="R43" gate="G$1" x="152.4" y="30.48"/>
-<instance part="R44" gate="G$1" x="149.86" y="-5.08"/>
+<instance part="R44" gate="G$1" x="12.7" y="27.94"/>
 <instance part="P+4" gate="1" x="-27.94" y="73.66"/>
 <instance part="P+5" gate="1" x="78.74" y="121.92"/>
+<instance part="X1" gate="-1" x="139.7" y="-5.08"/>
+<instance part="X1" gate="-2" x="-27.94" y="27.94"/>
+<instance part="X1" gate="-3" x="-27.94" y="22.86"/>
+<instance part="X3" gate="-1" x="2.54" y="-5.08"/>
+<instance part="X3" gate="-2" x="-27.94" y="-7.62"/>
+<instance part="X3" gate="-3" x="-27.94" y="-12.7"/>
+<instance part="X4" gate="-1" x="142.24" y="30.48"/>
+<instance part="X4" gate="-2" x="127" y="38.1"/>
+<instance part="X4" gate="-3" x="127" y="33.02"/>
+<instance part="X9" gate="-1" x="2.54" y="27.94"/>
+<instance part="X9" gate="-2" x="127" y="-15.24"/>
+<instance part="X9" gate="-3" x="127" y="-20.32"/>
+<instance part="GND52" gate="1" x="-22.86" y="20.32"/>
+<instance part="GND53" gate="1" x="-22.86" y="-15.24"/>
+<instance part="GND54" gate="1" x="132.08" y="-22.86"/>
+<instance part="GND55" gate="1" x="132.08" y="30.48"/>
+<instance part="P+8" gate="1" x="-22.86" y="30.48"/>
+<instance part="P+9" gate="1" x="-22.86" y="-5.08"/>
+<instance part="P+10" gate="1" x="-22.86" y="-5.08"/>
+<instance part="P+11" gate="1" x="132.08" y="40.64"/>
+<instance part="P+12" gate="1" x="132.08" y="-12.7"/>
+<instance part="P+13" gate="1" x="175.26" y="-10.16" rot="R180"/>
+<instance part="P+14" gate="1" x="33.02" y="-10.16" rot="R180"/>
+<instance part="P+15" gate="1" x="33.02" y="22.86" rot="R180"/>
+<instance part="P+16" gate="1" x="170.18" y="25.4" rot="R180"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="5V" class="0">
-<segment>
-<pinref part="D20" gate="G$1" pin="C2"/>
-<pinref part="SUPPLY3" gate="G$1" pin="5V"/>
-<wire x1="38.1" y1="27.94" x2="33.02" y2="27.94" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="D21" gate="G$1" pin="C2"/>
-<pinref part="SUPPLY4" gate="G$1" pin="5V"/>
-</segment>
-<segment>
-<pinref part="D23" gate="G$1" pin="C2"/>
-<pinref part="SUPPLY5" gate="G$1" pin="5V"/>
-</segment>
-<segment>
-<pinref part="D22" gate="G$1" pin="C2"/>
-<pinref part="SUPPLY6" gate="G$1" pin="5V"/>
-</segment>
-</net>
 <net name="GND" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="GND"/>
@@ -6929,7 +7160,7 @@ using ameteur radio standard layout</description>
 <segment>
 <pinref part="D20" gate="G$1" pin="A1"/>
 <pinref part="GND44" gate="1" pin="GND"/>
-<wire x1="20.32" y1="27.94" x2="22.86" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="-7.62" x2="160.02" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="D21" gate="G$1" pin="A1"/>
@@ -6942,6 +7173,22 @@ using ameteur radio standard layout</description>
 <segment>
 <pinref part="D23" gate="G$1" pin="A1"/>
 <pinref part="GND47" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="X1" gate="-3" pin="KL"/>
+<pinref part="GND52" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="X3" gate="-3" pin="KL"/>
+<pinref part="GND53" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="X9" gate="-3" pin="KL"/>
+<pinref part="GND54" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="X4" gate="-3" pin="KL"/>
+<pinref part="GND55" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="N$36" class="0">
@@ -7042,12 +7289,12 @@ using ameteur radio standard layout</description>
 </net>
 <net name="N$48" class="0">
 <segment>
-<pinref part="IC3" gate="A" pin="+IN"/>
-<wire x1="55.88" y1="30.48" x2="27.94" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="D20" gate="G$1" pin="C1A2"/>
-<junction x="27.94" y="30.48"/>
-<wire x1="27.94" y1="30.48" x2="17.78" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="-5.08" x2="154.94" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="R41" gate="G$1" pin="2"/>
+<pinref part="IC3" gate="D" pin="+IN"/>
+<wire x1="200.66" y1="-5.08" x2="165.1" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="165.1" y="-5.08"/>
 </segment>
 </net>
 <net name="N$49" class="0">
@@ -7131,12 +7378,13 @@ using ameteur radio standard layout</description>
 </net>
 <net name="N$51" class="0">
 <segment>
-<pinref part="IC3" gate="D" pin="+IN"/>
-<wire x1="200.66" y1="-5.08" x2="165.1" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="D23" gate="G$1" pin="C1A2"/>
-<junction x="165.1" y="-5.08"/>
-<wire x1="165.1" y1="-5.08" x2="154.94" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="27.94" x2="17.78" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="R44" gate="G$1" pin="2"/>
+<pinref part="IC3" gate="A" pin="+IN"/>
+<wire x1="55.88" y1="30.48" x2="27.94" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="30.48" x2="27.94" y2="27.94" width="0.1524" layer="91"/>
+<junction x="27.94" y="27.94"/>
 </segment>
 </net>
 <net name="N$56" class="0">
@@ -7162,6 +7410,66 @@ using ameteur radio standard layout</description>
 <wire x1="78.74" y1="106.68" x2="78.74" y2="104.14" width="0.1524" layer="91"/>
 <junction x="78.74" y="106.68"/>
 <pinref part="P+5" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="X1" gate="-2" pin="KL"/>
+<pinref part="P+8" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="X3" gate="-2" pin="KL"/>
+<pinref part="P+9" gate="1" pin="+5V"/>
+<pinref part="P+10" gate="1" pin="+5V"/>
+<junction x="-22.86" y="-7.62"/>
+<pinref part="P+10" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="X4" gate="-2" pin="KL"/>
+<pinref part="P+11" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="X9" gate="-2" pin="KL"/>
+<pinref part="P+12" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="D20" gate="G$1" pin="C2"/>
+<wire x1="175.26" y1="-7.62" x2="170.18" y2="-7.62" width="0.1524" layer="91"/>
+<pinref part="P+13" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="D21" gate="G$1" pin="C2"/>
+<pinref part="P+14" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="D23" gate="G$1" pin="C2"/>
+<pinref part="P+15" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="D22" gate="G$1" pin="C2"/>
+<pinref part="P+16" gate="1" pin="+5V"/>
+</segment>
+</net>
+<net name="N$24" class="0">
+<segment>
+<pinref part="R42" gate="G$1" pin="1"/>
+<pinref part="X3" gate="-1" pin="KL"/>
+</segment>
+</net>
+<net name="N$28" class="0">
+<segment>
+<pinref part="R43" gate="G$1" pin="1"/>
+<pinref part="X4" gate="-1" pin="KL"/>
+</segment>
+</net>
+<net name="N$20" class="0">
+<segment>
+<pinref part="R44" gate="G$1" pin="1"/>
+<pinref part="X9" gate="-1" pin="KL"/>
+</segment>
+</net>
+<net name="N$32" class="0">
+<segment>
+<pinref part="R41" gate="G$1" pin="1"/>
+<pinref part="X1" gate="-1" pin="KL"/>
 </segment>
 </net>
 </nets>
